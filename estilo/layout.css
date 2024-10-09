@@ -11,8 +11,7 @@ header{
 /* Especificidad 001*/
 @media screen and (max-width: 799px) {
     header {
-        font-size: 2em; /*tamaño de fuente reducido*/
-        padding: 0.5em; /*espacio interno reducido */ 
+        /* Redefinición de flex-direction para que la navegación sea adaptable */
         flex-direction: column;
     }
 }

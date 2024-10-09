@@ -5,6 +5,7 @@
 header{
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
 }
 
 /* Especificidad 001*/
@@ -12,5 +13,6 @@ header{
     header {
         font-size: 2em; /*tamaño de fuente reducido*/
         padding: 0.5em; /*espacio interno reducido */ 
+        flex-direction: column;
     }
 }

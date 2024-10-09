@@ -56,7 +56,7 @@ section{
 }
 
 /* Especificidad 001*/
-article{
+aside{
     /* Color de primer plano heredado de body*/
     background-color: #74BDCB;
 }

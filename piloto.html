@@ -9,26 +9,32 @@
     <meta name ="description" content ="aquí cada documento debe tener la descripción 
     del contenido concreto del mismo" />
     <meta name ="keywords" content ="aquí cada documento debe tener la lista
-de las palabras clave del mismo separadas por comas" />
-<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+    de las palabras clave del mismo separadas por comas" />
+    <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
     <link rel="icon" href="multimedia/piloto-favicon.ico" type="image/x-icon"/>
 </head>
-
 <body>
+    <p>
+        Estás en Inicio >> Piloto
+    </p>
     <!-- Datos con el contenidos que aparece en el navegador -->
-    <h1>F1 Desktop</h1>
-    <nav>
-        <a accesskey="I" href="index.html" tabindex="1">Index</a>
-        <a accesskey="P" href="piloto.html" tabindex="2">Piloto</a>
-        <a accesskey="N" href="noticias.html" tabindex="3">Noticias</a>
-        <a accesskey="A" href="calendario.html" tabindex="4">Calendario</a>
-        <a accesskey="M" href="meterologia.html" tabindex="5">Meteorologia</a>
-        <a accesskey="C" href="circuito.html" tabindex="6">Circuito</a>
-        <a accesskey="V" href="viajes.html" tabindex="7">Viajes</a>
-        <a accesskey="J" href="juegos.html" tabindex="8">Juegos</a>
-        
-    </nav>
+    
+    <header>
+        <h1><a href="index.html">F1 Desktop</a></h1>
+        <nav>
+            <a href="index.html">Index</a>
+            <a href="piloto.html" class="active">Piloto</a>
+            <a href="noticias.html">Noticias</a>
+            <a href="calendario.html">Calendario</a>
+            <a href="meterologia.html">Meteorologia</a>
+            <a href="circuito.html">Circuito</a>
+            <a href="viajes.html">Viajes</a>
+            <a href="juegos.html">Juegos</a>
+            
+        </nav>
+    </header>
     <section>
         <h2>Información Personal</h2>
         <p>
@@ -151,7 +157,7 @@ de las palabras clave del mismo separadas por comas" />
        
     </section>
 
-    <section>
+    <aside>
         <h2>Conceptos Relacionados con F1</h2>
         <p>
             Estos son algunos de los conceptos más importantes para entender el contexto de la formula 1
@@ -168,7 +174,7 @@ de las palabras clave del mismo separadas por comas" />
                 <dt>Undercut</dt>
                 <dd>Estrategia de adelantamiento en la que un coche entra a boxes antes que otro para ganar posición tras la parada.</dd>
             </dl>
-    </section>
+    </aside>
 
 
     <article>

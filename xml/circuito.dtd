@@ -1,0 +1,28 @@
+<!ELEMENT circuito (referencias, galeriaFotografia, galeriaVideo?, coordenadas, puntosCircuito)>
+<!ATTLIST circuito nombre CDATA #REQUIRED>
+<!ATTLIST circuito longitud CDATA #REQUIRED>
+<!ATTLIST circuito anchuraMedia CDATA #REQUIRED>
+<!ATTLIST circuito fecha CDATA #REQUIRED>
+<!ATTLIST circuito horaInicio CDATA #REQUIRED>
+<!ATTLIST circuito numeroVueltas CDATA #REQUIRED>
+<!ATTLIST circuito localidad CDATA #REQUIRED>
+<!ATTLIST circuito pais CDATA #REQUIRED>
+<!ELEMENT referencias (referencia+)>
+<!ELEMENT referencia (#PCDATA)>
+<!ELEMENT galeriaFotografia (fotografia*)>
+<!ELEMENT fotografia (#PCDATA)>
+<!ATTLIST fotografia nombre CDATA #REQUIRED>
+<!ELEMENT galeriaVideo (video*)>
+<!ELEMENT video (#PCDATA)>
+<!ATTLIST video nombre CDATA #REQUIRED>
+<!ATTLIST video src CDATA #REQUIRED>
+<!ELEMENT coordenadas (#PCDATA)>
+<!ATTLIST coordenadas longitud CDATA #REQUIRED>
+<!ATTLIST coordenadas latitud CDATA #REQUIRED>
+<!ATTLIST coordenadas altitud CDATA #REQUIRED>
+<!ELEMENT puntosCircuito (punto+)>
+<!ELEMENT punto (coordenadas, tramo)>
+<!ATTLIST punto numeroSector CDATA #REQUIRED>
+<!ELEMENT tramo (#PCDATA)>
+<!ATTLIST tramo longitud CDATA #REQUIRED>
+<!ATTLIST tramo unidad CDATA #REQUIRED>

@@ -128,7 +128,7 @@ video{
     height: auto;
 }
 
-/* Especificidad 001*/
+/* Especificidad 012*/
 nav a.active {
     color: #8B0000;  
     font-weight: bold;

@@ -8,10 +8,12 @@ header{
     flex-direction: row;
 }
 
+
+
 /* Especificidad 001*/
 @media screen and (max-width: 799px) {
     header {
-        /* Redefinición de flex-direction para que la navegación sea adaptable */
         flex-direction: column;
     }
 }
+

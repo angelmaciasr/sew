@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<circuito xmlns="https_//www.uniovi.es" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    nombre="Circuito de las Américas"
+    longitud="5.513"
+    anchuraMedia="15"
+    fecha="2024-10-22"
+    horaInicio="14:00"
+    numeroVueltas="56"
+    localidad="Austin"
+    pais="Estados Unidos">
+  
+  <!-- Referencias -->
+  <referencias>
+    <referencia>https://circuitoftheamericas.com/</referencia>
+    <referencia>https://es.wikipedia.org/wiki/Circuito_de_las_Américas</referencia>
+    <referencia>https://www.formula1.com/en/racing/2023/United_States.html</referencia>
+  </referencias>
+
+  <!-- Galería Fotográfica -->
+  <galeriaFotografia>
+    <fotografia nombre="plano-circuito.jpg">Vista aérea del Circuito de las Américas.</fotografia>
+    <fotografia nombre="curva1.jpg">La famosa curva 1 con elevación.</fotografia>
+  </galeriaFotografia>
+
+  <!-- Galería de Video (opcional) -->
+  <galeriaVideo>
+    <video src="video-circuito.mp4" nombre="circuito USA">Resumen del GP de Estados Unidos 2019.</video>
+  </galeriaVideo>
+
+  <!-- Coordenadas del circuito -->
+  <coordenadas longitud="-97.6411" latitud="30.1328" altitud="150"/>
+
+  <!-- Puntos del Circuito -->
+  <puntosCircuito>
+    <!-- Recta Principal (Inicio) -->
+    <punto numeroSector="1">
+      <coordenadas longitud="-97.6400" latitud="30.1300" altitud="150">-97.6400, 30.1300, 150m</coordenadas>
+      <tramo longitud="0" unidad="metros">Inicio de Recta Principal</tramo>
+    </punto>
+    <punto numeroSector="1">
+      <coordenadas longitud="-97.6410" latitud="30.1330" altitud="153">-97.6410, 30.1330, 153m</coordenadas>
+      <tramo longitud="500" unidad="metros">Final de Recta Principal</tramo>
+    </punto>
+
+    <!-- Curva 1 -->
+    <punto numeroSector="1">
+      <coordenadas longitud="-97.6412" latitud="30.1332" altitud="155">-97.6412, 30.1332, 155m</coordenadas>
+      <tramo longitud="100" unidad="metros">Inicio de Curva 1</tramo>
+    </punto>
+    <punto numeroSector="1">
+      <coordenadas longitud="-97.6415" latitud="30.1334" altitud="156">-97.6415, 30.1334, 156m</coordenadas>
+      <tramo longitud="50" unidad="metros">Mitad de Curva 1</tramo>
+    </punto>
+    <punto numeroSector="1">
+      <coordenadas longitud="-97.6418" latitud="30.1336" altitud="157">-97.6418, 30.1336, 157m</coordenadas>
+      <tramo longitud="100" unidad="metros">Final de Curva 1</tramo>
+    </punto>
+
+    <!-- Curva 2 -->
+    <punto numeroSector="1">
+      <coordenadas longitud="-97.6420" latitud="30.1340" altitud="158">-97.6420, 30.1340, 158m</coordenadas>
+      <tramo longitud="120" unidad="metros">Inicio de Curva 2</tramo>
+    </punto>
+    <punto numeroSector="1">
+      <coordenadas longitud="-97.6423" latitud="30.1343" altitud="159">-97.6423, 30.1343, 159m</coordenadas>
+      <tramo longitud="60" unidad="metros">Mitad de Curva 2</tramo>
+    </punto>
+    <punto numeroSector="1">
+      <coordenadas longitud="-97.6425" latitud="30.1345" altitud="160">-97.6425, 30.1345, 160m</coordenadas>
+      <tramo longitud="120" unidad="metros">Final de Curva 2</tramo>
+    </punto>
+
+    <!-- Curva 3 -->
+    <punto numeroSector="1">
+      <coordenadas longitud="-97.6430" latitud="30.1349" altitud="161">-97.6430, 30.1349, 161m</coordenadas>
+      <tramo longitud="140" unidad="metros">Inicio de Curva 3</tramo>
+    </punto>
+    <punto numeroSector="1">
+      <coordenadas longitud="-97.6433" latitud="30.1351" altitud="162">-97.6433, 30.1351, 162m</coordenadas>
+      <tramo longitud="70" unidad="metros">Mitad de Curva 3</tramo>
+    </punto>
+    <punto numeroSector="1">
+      <coordenadas longitud="-97.6435" latitud="30.1353" altitud="163">-97.6435, 30.1353, 163m</coordenadas>
+      <tramo longitud="140" unidad="metros">Final de Curva 3</tramo>
+    </punto>
+
+    <!-- Curva 4 -->
+    <punto numeroSector="1">
+      <coordenadas longitud="-97.6440" latitud="30.1357" altitud="164">-97.6440, 30.1357, 164m</coordenadas>
+      <tramo longitud="150" unidad="metros">Inicio de Curva 4</tramo>
+    </punto>
+    <punto numeroSector="1">
+      <coordenadas longitud="-97.6443" latitud="30.1360" altitud="165">-97.6443, 30.1360, 165m</coordenadas>
+      <tramo longitud="75" unidad="metros">Mitad de Curva 4</tramo>
+    </punto>
+    <punto numeroSector="1">
+      <coordenadas longitud="-97.6445" latitud="30.1362" altitud="166">-97.6445, 30.1362, 166m</coordenadas>
+      <tramo longitud="150" unidad="metros">Final de Curva 4</tramo>
+    </punto>
+
+    <!-- Curva 5 -->
+    <punto numeroSector="1">
+      <coordenadas longitud="-97.6450" latitud="30.1370" altitud="167">-97.6450, 30.1370, 167m</coordenadas>
+      <tramo longitud="160" unidad="metros">Inicio de Curva 5</tramo>
+    </punto>
+    <punto numeroSector="1">
+      <coordenadas longitud="-97.6453" latitud="30.1372" altitud="168">-97.6453, 30.1372, 168m</coordenadas>
+      <tramo longitud="80" unidad="metros">Mitad de Curva 5</tramo>
+    </punto>
+    <punto numeroSector="1">
+      <coordenadas longitud="-97.6456" latitud="30.1375" altitud="169">-97.6456, 30.1375, 169m</coordenadas>
+      <tramo longitud="160" unidad="metros">Final de Curva 5</tramo>
+    </punto>
+
+    <!-- Curva 6 -->
+    <punto numeroSector="1">
+      <coordenadas longitud="-97.6460" latitud="30.1378" altitud="170">-97.6460, 30.1378, 170m</coordenadas>
+      <tramo longitud="160" unidad="metros">Inicio de Curva 6</tramo>
+    </punto>
+    <punto numeroSector="1">
+      <coordenadas longitud="-97.6463" latitud="30.1380" altitud="171">-97.6463, 30.1380, 171m</coordenadas>
+      <tramo longitud="80" unidad="metros">Mitad de Curva 6</tramo>
+    </punto>
+    <punto numeroSector="1">
+      <coordenadas longitud="-97.6466" latitud="30.1383" altitud="172">-97.6466, 30.1383, 172m</coordenadas>
+      <tramo longitud="160" unidad="metros">Final de Curva 6</tramo>
+    </punto>
+
+    <!-- Recta 1 (entre curvas 6 y 7) -->
+    <punto numeroSector="1">
+      <coordenadas longitud="-97.6470" latitud="30.1385" altitud="172">-97.6470, 30.1385, 172m</coordenadas>
+      <tramo longitud="400" unidad="metros">Inicio de Recta 1</tramo>
+    </punto>
+    <punto numeroSector="2">
+      <coordenadas longitud="-97.6485" latitud="30.1395" altitud="174">-97.6485, 30.1395, 174m</coordenadas>
+      <tramo longitud="400" unidad="metros">Final de Recta 1</tramo>
+    </punto>
+
+    <!-- Curva 7 -->
+    <punto numeroSector="2">
+      <coordenadas longitud="-97.6488" latitud="30.1397" altitud="175">-97.6488, 30.1397, 175m</coordenadas>
+      <tramo longitud="120" unidad="metros">Inicio de Curva 7</tramo>
+    </punto>
+    <punto numeroSector="2">
+      <coordenadas longitud="-97.6490" latitud="30.1400" altitud="176">-97.6490, 30.1400, 176m</coordenadas>
+      <tramo longitud="60" unidad="metros">Mitad de Curva 7</tramo>
+    </punto>
+    <punto numeroSector="2">
+      <coordenadas longitud="-97.6493" latitud="30.1402" altitud="177">-97.6493, 30.1402, 177m</coordenadas>
+      <tramo longitud="120" unidad="metros">Final de Curva 7</tramo>
+    </punto>
+
+    <!-- Curva 8 -->
+    <punto numeroSector="2">
+      <coordenadas longitud="-97.6496" latitud="30.1405" altitud="178">-97.6496, 30.1405, 178m</coordenadas>
+      <tramo longitud="140" unidad="metros">Inicio de Curva 8</tramo>
+    </punto>
+    <punto numeroSector="2">
+      <coordenadas longitud="-97.6499" latitud="30.1407" altitud="179">-97.6499, 30.1407, 179m</coordenadas>
+      <tramo longitud="70" unidad="metros">Mitad de Curva 8</tramo>
+    </punto>
+    <punto numeroSector="2">
+      <coordenadas longitud="-97.6502" latitud="30.1410" altitud="180">-97.6502, 30.1410, 180m</coordenadas>
+      <tramo longitud="140" unidad="metros">Final de Curva 8</tramo>
+    </punto>
+
+    <!-- Recta 2 (entre curvas 8 y 9) -->
+    <punto numeroSector="2">
+      <coordenadas longitud="-97.6505" latitud="30.1412" altitud="181">-97.6505, 30.1412, 181m</coordenadas>
+      <tramo longitud="400" unidad="metros">Inicio de Recta 2</tramo>
+    </punto>
+    <punto numeroSector="2">
+      <coordenadas longitud="-97.6520" latitud="30.1422" altitud="183">-97.6520, 30.1422, 183m</coordenadas>
+      <tramo longitud="400" unidad="metros">Final de Recta 2</tramo>
+    </punto>
+
+    <!-- Curva 9 -->
+    <punto numeroSector="2">
+      <coordenadas longitud="-97.6523" latitud="30.1424" altitud="184">-97.6523, 30.1424, 184m</coordenadas>
+      <tramo longitud="120" unidad="metros">Inicio de Curva 9</tramo>
+    </punto>
+    <punto numeroSector="2">
+      <coordenadas longitud="-97.6526" latitud="30.1427" altitud="185">-97.6526, 30.1427, 185m</coordenadas>
+      <tramo longitud="60" unidad="metros">Mitad de Curva 9</tramo>
+    </punto>
+    <punto numeroSector="2">
+      <coordenadas longitud="-97.6529" latitud="30.1429" altitud="186">-97.6529, 30.1429, 186m</coordenadas>
+      <tramo longitud="120" unidad="metros">Final de Curva 9</tramo>
+    </punto>
+
+    <!-- Curva 10 -->
+    <punto numeroSector="2">
+      <coordenadas longitud="-97.6532" latitud="30.1431" altitud="187">-97.6532, 30.1431, 187m</coordenadas>
+      <tramo longitud="140" unidad="metros">Inicio de Curva 10</tramo>
+    </punto>
+    <punto numeroSector="2">
+      <coordenadas longitud="-97.6535" latitud="30.1434" altitud="188">-97.6535, 30.1434, 188m</coordenadas>
+      <tramo longitud="70" unidad="metros">Mitad de Curva 10</tramo>
+    </punto>
+    <punto numeroSector="2">
+      <coordenadas longitud="-97.6538" latitud="30.1436" altitud="189">-97.6538, 30.1436, 189m</coordenadas>
+      <tramo longitud="140" unidad="metros">Final de Curva 10</tramo>
+    </punto>
+
+    <!-- Curva 11 -->
+    <punto numeroSector="2">
+      <coordenadas longitud="-97.6540" latitud="30.1438" altitud="190">-97.6540, 30.1438, 190m</coordenadas>
+      <tramo longitud="150" unidad="metros">Inicio de Curva 11</tramo>
+    </punto>
+    <punto numeroSector="2">
+      <coordenadas longitud="-97.6543" latitud="30.1440" altitud="191">-97.6543, 30.1440, 191m</coordenadas>
+      <tramo longitud="75" unidad="metros">Mitad de Curva 11</tramo>
+    </punto>
+    <punto numeroSector="2">
+      <coordenadas longitud="-97.6546" latitud="30.1443" altitud="192">-97.6546, 30.1443, 192m</coordenadas>
+      <tramo longitud="150" unidad="metros">Final de Curva 11</tramo>
+    </punto>
+
+    <!-- Recta 1 (entre curvas 11 y 12) -->
+    <punto numeroSector="2">
+      <coordenadas longitud="-97.6549" latitud="30.1446" altitud="193">-97.6549, 30.1446, 193m</coordenadas>
+      <tramo longitud="400" unidad="metros">Inicio de Recta 1</tramo>
+    </punto>
+    <punto numeroSector="2">
+      <coordenadas longitud="-97.6560" latitud="30.1460" altitud="195">-97.6560, 30.1460, 195m</coordenadas>
+      <tramo longitud="400" unidad="metros">Final de Recta 1</tramo>
+    </punto>
+
+    <!-- Curva 12 -->
+    <punto numeroSector="2">
+      <coordenadas longitud="-97.6565" latitud="30.1462" altitud="196">-97.6565, 30.1462, 196m</coordenadas>
+      <tramo longitud="120" unidad="metros">Inicio de Curva 12</tramo>
+    </punto>
+    <punto numeroSector="2">
+      <coordenadas longitud="-97.6567" latitud="30.1464" altitud="197">-97.6567, 30.1464, 197m</coordenadas>
+      <tramo longitud="60" unidad="metros">Mitad de Curva 12</tramo>
+    </punto>
+    <punto numeroSector="2">
+      <coordenadas longitud="-97.6570" latitud="30.1466" altitud="198">-97.6570, 30.1466, 198m</coordenadas>
+      <tramo longitud="120" unidad="metros">Final de Curva 12</tramo>
+    </punto>
+
+    <!-- Curva 13 -->
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6575" latitud="30.1468" altitud="199">-97.6575, 30.1468, 199m</coordenadas>
+      <tramo longitud="140" unidad="metros">Inicio de Curva 13</tramo>
+    </punto>
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6578" latitud="30.1470" altitud="200">-97.6578, 30.1470, 200m</coordenadas>
+      <tramo longitud="70" unidad="metros">Mitad de Curva 13</tramo>
+    </punto>
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6581" latitud="30.1473" altitud="201">-97.6581, 30.1473, 201m</coordenadas>
+      <tramo longitud="140" unidad="metros">Final de Curva 13</tramo>
+    </punto>
+
+    <!-- Curva 14 -->
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6585" latitud="30.1476" altitud="202">-97.6585, 30.1476, 202m</coordenadas>
+      <tramo longitud="150" unidad="metros">Inicio de Curva 14</tramo>
+    </punto>
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6588" latitud="30.1479" altitud="203">-97.6588, 30.1479, 203m</coordenadas>
+      <tramo longitud="75" unidad="metros">Mitad de Curva 14</tramo>
+    </punto>
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6591" latitud="30.1481" altitud="204">-97.6591, 30.1481, 204m</coordenadas>
+      <tramo longitud="150" unidad="metros">Final de Curva 14</tramo>
+    </punto>
+
+    <!-- Curva 15 -->
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6596" latitud="30.1485" altitud="205">-97.6596, 30.1485, 205m</coordenadas>
+      <tramo longitud="160" unidad="metros">Inicio de Curva 15</tramo>
+    </punto>
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6599" latitud="30.1487" altitud="206">-97.6599, 30.1487, 206m</coordenadas>
+      <tramo longitud="80" unidad="metros">Mitad de Curva 15</tramo>
+    </punto>
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6602" latitud="30.1490" altitud="207">-97.6602, 30.1490, 207m</coordenadas>
+      <tramo longitud="160" unidad="metros">Final de Curva 15</tramo>
+    </punto>
+
+    <!-- Curva 16 -->
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6607" latitud="30.1492" altitud="208">-97.6607, 30.1492, 208m</coordenadas>
+      <tramo longitud="160" unidad="metros">Inicio de Curva 16</tramo>
+    </punto>
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6610" latitud="30.1495" altitud="209">-97.6610, 30.1495, 209m</coordenadas>
+      <tramo longitud="80" unidad="metros">Mitad de Curva 16</tramo>
+    </punto>
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6613" latitud="30.1497" altitud="210">-97.6613, 30.1497, 210m</coordenadas>
+      <tramo longitud="160" unidad="metros">Final de Curva 16</tramo>
+    </punto>
+
+    <!-- Recta 2 (entre curvas 16 y 17) -->
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6615" latitud="30.1500" altitud="211">-97.6615, 30.1500, 211m</coordenadas>
+      <tramo longitud="400" unidad="metros">Inicio de Recta 2</tramo>
+    </punto>
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6625" latitud="30.1510" altitud="213">-97.6625, 30.1510, 213m</coordenadas>
+      <tramo longitud="400" unidad="metros">Final de Recta 2</tramo>
+    </punto>
+
+    <!-- Curva 17 -->
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6628" latitud="30.1513" altitud="214">-97.6628, 30.1513, 214m</coordenadas>
+      <tramo longitud="120" unidad="metros">Inicio de Curva 17</tramo>
+    </punto>
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6630" latitud="30.1515" altitud="215">-97.6630, 30.1515, 215m</coordenadas>
+      <tramo longitud="60" unidad="metros">Mitad de Curva 17</tramo>
+    </punto>
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6633" latitud="30.1517" altitud="216">-97.6633, 30.1517, 216m</coordenadas>
+      <tramo longitud="120" unidad="metros">Final de Curva 17</tramo>
+    </punto>
+
+    <!-- Curva 18 -->
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6637" latitud="30.1520" altitud="217">-97.6637, 30.1520, 217m</coordenadas>
+      <tramo longitud="140" unidad="metros">Inicio de Curva 18</tramo>
+    </punto>
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6640" latitud="30.1522" altitud="218">-97.6640, 30.1522, 218m</coordenadas>
+      <tramo longitud="70" unidad="metros">Mitad de Curva 18</tramo>
+    </punto>
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6643" latitud="30.1525" altitud="219">-97.6643, 30.1525, 219m</coordenadas>
+      <tramo longitud="140" unidad="metros">Final de Curva 18</tramo>
+    </punto>
+
+    <!-- Curva 19 -->
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6645" latitud="30.1527" altitud="220">-97.6645, 30.1527, 220m</coordenadas>
+      <tramo longitud="150" unidad="metros">Inicio de Curva 19</tramo>
+    </punto>
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6648" latitud="30.1530" altitud="221">-97.6648, 30.1530, 221m</coordenadas>
+      <tramo longitud="75" unidad="metros">Mitad de Curva 19</tramo>
+    </punto>
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6651" latitud="30.1532" altitud="222">-97.6651, 30.1532, 222m</coordenadas>
+      <tramo longitud="150" unidad="metros">Final de Curva 19</tramo>
+    </punto>
+
+    <!-- Curva 20 (última curva antes de la meta) -->
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6542" latitud="30.1452" altitud="175">-97.6542, 30.1452, 175m</coordenadas>
+      <tramo longitud="160" unidad="metros">Inicio de Curva 20</tramo>
+    </punto>
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6545" latitud="30.1455" altitud="176">-97.6545, 30.1455, 176m</coordenadas>
+      <tramo longitud="80" unidad="metros">Mitad de Curva 20</tramo>
+    </punto>
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6548" latitud="30.1458" altitud="177">-97.6548, 30.1458, 177m</coordenadas>
+      <tramo longitud="160" unidad="metros">Final de Curva 20</tramo>
+    </punto>
+
+    <!-- Recta final (meta) -->
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6550" latitud="30.1460" altitud="178">-97.6550, 30.1460, 178m</coordenadas>
+      <tramo longitud="300" unidad="metros">Inicio de Recta Final</tramo>
+    </punto>
+    <punto numeroSector="3">
+      <coordenadas longitud="-97.6565" latitud="30.1470" altitud="180">-97.6565, 30.1470, 180m</coordenadas>
+      <tramo longitud="300" unidad="metros">Final de Recta Final</tramo>
+    </punto>
+  </puntosCircuito>
+
+
+</circuito>

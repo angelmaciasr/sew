@@ -28,6 +28,12 @@ div {
     border-radius: 50%;
 }
 
+@media screen and (max-width: 600px) {
+    div {
+        aspect-ratio: 0.5;
+    }   
+}
+
 button:first-of-type {
     grid-column: 2 / span 1;
 }

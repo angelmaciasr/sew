@@ -73,7 +73,6 @@ class Semaforo {
     
         const reactionButton = document.querySelector('.reactionButton');
         reactionButton.disabled = false;
-
     }
 
     stopReaction(){
@@ -84,7 +83,7 @@ class Semaforo {
         const mainElement = document.querySelector('main');
         const rTime = document.createElement('p');
         rTime.classList.add('reactionTime');
-        rTime.textContent = "Tiempo de Reacción: " + reactionTime + "ms";
+        rTime.textContent = "Tiempo de Reacción: " + reactionTime + " ms";
         mainElement.appendChild(rTime);
 
         mainElement.classList.remove('load');
@@ -95,6 +94,54 @@ class Semaforo {
         const startButton = document.querySelector('.startButton');
         startButton.disabled = false;
 
+        this.createRecordForm(reactionTime);
+
+    }
+
+    createRecordForm(reactionTime){
+        const mainElement = document.querySelector('main');
+
+        const form = document.createElement('form');
+        form.action = '#';
+        form.method = 'post';
+        form.name = 'recordForm';
+
+        const inName = document.createElement('input');
+        inName.type = 'text';
+        inName.name = 'name';
+        inName.placeholder = 'Nombre';
+        inName.required = true;
+        form.appendChild(inName);
+
+        const inSurname = document.createElement('input');
+        inSurname.type = 'text';
+        inSurname.name = 'surname';
+        inSurname.placeholder = 'Apellidos';
+        inSurname.required = true;
+        form.appendChild(inSurname);
+
+        const inLevel = document.createElement('input');
+        inLevel.type = 'text';
+        inLevel.name = 'level';
+        inLevel.value = this.difficulty;
+        inLevel.readOnly = true;
+        form.appendChild(inLevel);
+
+        const inTime = document.createElement('input');
+        inTime.type = 'text';
+        inTime.name = 'time';
+        inTime.value = reactionTime;
+        inTime.readOnly = true;
+        form.appendChild(inTime);
+
+        const submit = document.createElement('input');
+        submit.type = 'submit';
+        submit.value = 'Guardar';
+
+        // form.onsubmit = this.saveRecord.bind(this);
+
+        form.appendChild(submit);
+        mainElement.appendChild(form);
     }
 }
 

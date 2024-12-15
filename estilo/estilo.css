@@ -55,6 +55,12 @@ section{
     background-color: #EFE7BC;
 }
 
+/* Especificidad 001 */
+article{
+    /* Color de primero plano heredado de body */
+    background-color: lightpink;
+}
+
 /* Especificidad 001*/
 aside{
     /* Color de primer plano heredado de body*/

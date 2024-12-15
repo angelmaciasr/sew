@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="2.0">
+<polyline points = "-97.642267,30.133531
+-97.637717,30.130381
+-97.637092,30.130044
+-97.636864,30.130036
+-97.636761,30.130175
+-97.637325,30.131561
+-97.637361,30.131906
+-97.637233,30.132303
+-97.636789,30.132708
+-97.635119,30.133578
+-97.634833,30.134225
+-97.634572,30.134461
+-97.633972,30.134669
+-97.633739,30.134969
+-97.633603,30.135683
+-97.632828,30.136161
+-97.632389,30.136208
+-97.631761,30.135967
+-97.631253,30.135728
+-97.630944,30.135781
+-97.630217,30.136461
+-97.629725,30.136669
+-97.629331,30.136511
+-97.629156,30.136214
+-97.628925,30.136142
+-97.627031,30.136489
+-97.624628,30.138975
+-97.624425,30.13935
+-97.624653,30.139492
+-97.627086,30.138803
+-97.632994,30.137731
+-97.636356,30.137425
+-97.636650,30.137211
+-97.635958,30.136481
+-97.635447,30.135814
+-97.635467,30.135539
+-97.636247,30.135506
+-97.636486,30.1357
+-97.636686,30.136164
+-97.637125,30.136572
+-97.637694,30.136636
+-97.637803,30.136483
+-97.636781,30.134947
+-97.637036,30.134064
+-97.637978,30.133642
+-97.638639,30.133697
+-97.639297,30.134042
+-97.640469,30.135464
+-97.640842,30.135533
+-97.643306,30.134636
+-97.6435,30.134447
+-97.643281,30.134178"
+style="fill:white;stroke:red;stroke-width=4" />
+<text x="-97.642267" y="30.133531" font-family="Verdana" font-size="20" fill="black">L�nea de Meta</text>
+<text x="-97.637717" y="30.130381" font-family="Verdana" font-size="20" fill="black">Inicio Curva 1</text>
+<text x="-97.637092" y="30.130044" font-family="Verdana" font-size="20" fill="black">Mitad Curva 1</text>
+<text x="-97.636864" y="30.130036" font-family="Verdana" font-size="20" fill="black">V�rtice Curva 1</text>
+<text x="-97.636761" y="30.130175" font-family="Verdana" font-size="20" fill="black">Final Curva 1</text>
+<text x="-97.637325" y="30.131561" font-family="Verdana" font-size="20" fill="black">Inicio Curva 2</text>
+<text x="-97.637361" y="30.131906" font-family="Verdana" font-size="20" fill="black">Mitad Curva 2</text>
+<text x="-97.637233" y="30.132303" font-family="Verdana" font-size="20" fill="black">V�rtice Curva 2</text>
+<text x="-97.636789" y="30.132708" font-family="Verdana" font-size="20" fill="black">Final Curva 2</text>
+<text x="-97.635119" y="30.133578" font-family="Verdana" font-size="20" fill="black">Curva 3</text>
+<text x="-97.634833" y="30.134225" font-family="Verdana" font-size="20" fill="black">Inicio Curva 4</text>
+<text x="-97.634572" y="30.134461" font-family="Verdana" font-size="20" fill="black">Final Curva 4</text>
+<text x="-97.633972" y="30.134669" font-family="Verdana" font-size="20" fill="black">Inicio Curva 5</text>
+<text x="-97.633739" y="30.134969" font-family="Verdana" font-size="20" fill="black">Final Curva 5</text>
+<text x="-97.633603" y="30.135683" font-family="Verdana" font-size="20" fill="black">Inicio Curva 6</text>
+<text x="-97.632828" y="30.136161" font-family="Verdana" font-size="20" fill="black">Mitad Curva 6</text>
+<text x="-97.632389" y="30.136208" font-family="Verdana" font-size="20" fill="black">Final Curva 6</text>
+<text x="-97.631761" y="30.135967" font-family="Verdana" font-size="20" fill="black">Segundo Sector</text>
+<text x="-97.631253" y="30.135728" font-family="Verdana" font-size="20" fill="black">Inicio Curva 7</text>
+<text x="-97.630944" y="30.135781" font-family="Verdana" font-size="20" fill="black">Final Curva 7</text>
+<text x="-97.630217" y="30.136461" font-family="Verdana" font-size="20" fill="black">Inicio Curva 8</text>
+<text x="-97.629725" y="30.136669" font-family="Verdana" font-size="20" fill="black">V�rtice Curva 8</text>
+<text x="-97.629331" y="30.136511" font-family="Verdana" font-size="20" fill="black">Final Curva 8</text>
+<text x="-97.629156" y="30.136214" font-family="Verdana" font-size="20" fill="black">Inicio Curva 9</text>
+<text x="-97.628925" y="30.136142" font-family="Verdana" font-size="20" fill="black">Final Curva 9</text>
+<text x="-97.627031" y="30.136489" font-family="Verdana" font-size="20" fill="black">Curva 10</text>
+<text x="-97.624628" y="30.138975" font-family="Verdana" font-size="20" fill="black">Inicio Curva 11</text>
+<text x="-97.624425" y="30.13935" font-family="Verdana" font-size="20" fill="black">V�rtice Curva 11</text>
+<text x="-97.624653" y="30.139492" font-family="Verdana" font-size="20" fill="black">Final Curva 11</text>
+<text x="-97.627086" y="30.138803" font-family="Verdana" font-size="20" fill="black">Activaci�n DRS</text>
+<text x="-97.632994" y="30.137731" font-family="Verdana" font-size="20" fill="black">Mitad de Recta</text>
+<text x="-97.636356" y="30.137425" font-family="Verdana" font-size="20" fill="black">Inicio Curva 12</text>
+<text x="-97.636650" y="30.137211" font-family="Verdana" font-size="20" fill="black">Final Curva 12</text>
+<text x="-97.635958" y="30.136481" font-family="Verdana" font-size="20" fill="black">Tercer Sector</text>
+<text x="-97.635447" y="30.135814" font-family="Verdana" font-size="20" fill="black">Inicio Curva 13</text>
+<text x="-97.635467" y="30.135539" font-family="Verdana" font-size="20" fill="black">Final Curva 13</text>
+<text x="-97.636247" y="30.135506" font-family="Verdana" font-size="20" fill="black">Inicio Curva 14</text>
+<text x="-97.636486" y="30.1357" font-family="Verdana" font-size="20" fill="black">Final Curva 14</text>
+<text x="-97.636686" y="30.136164" font-family="Verdana" font-size="20" fill="black">Inicio Curva 15</text>
+<text x="-97.637125" y="30.136572" font-family="Verdana" font-size="20" fill="black">Mitad Curva 15</text>
+<text x="-97.637694" y="30.136636" font-family="Verdana" font-size="20" fill="black">V�rtice Curva 15</text>
+<text x="-97.637803" y="30.136483" font-family="Verdana" font-size="20" fill="black">Final Curva 15</text>
+<text x="-97.636781" y="30.134947" font-family="Verdana" font-size="20" fill="black">Curva 16</text>
+<text x="-97.637036" y="30.134064" font-family="Verdana" font-size="20" fill="black">Curva 17</text>
+<text x="-97.637978" y="30.133642" font-family="Verdana" font-size="20" fill="black">Inicio Curva 18</text>
+<text x="-97.638639" y="30.133697" font-family="Verdana" font-size="20" fill="black">V�rtice Curva 18</text>
+<text x="-97.639297" y="30.134042" font-family="Verdana" font-size="20" fill="black">Final Curva 18</text>
+<text x="-97.640469" y="30.135464" font-family="Verdana" font-size="20" fill="black">Inicio Curva 19</text>
+<text x="-97.640842" y="30.135533" font-family="Verdana" font-size="20" fill="black">Final Curva 19</text>
+<text x="-97.643306" y="30.134636" font-family="Verdana" font-size="20" fill="black">Inicio Curva 20</text>
+<text x="-97.6435" y="30.134447" font-family="Verdana" font-size="20" fill="black">V�rtice Curva 20</text>
+<text x="-97.643281" y="30.134178" font-family="Verdana" font-size="20" fill="black">Final Curva 20</text>
+</svg>

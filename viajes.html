@@ -4,16 +4,19 @@
 <head>
     <!-- Datos que describen el documento -->
     <meta charset="UTF-8" />
-    <title>F1 DESKTOP - INDEX</title>
+    <title>F1 DESKTOP - VIAJES</title>
     <meta name="author" content="Ángel Macías"/>
     <meta name ="description" content ="aquí cada documento debe tener la descripción 
     del contenido concreto del mismo" />
     <meta name ="keywords" content ="aquí cada documento debe tener la lista
-de las palabras clave del mismo separadas por comas" />
-<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+    de las palabras clave del mismo separadas por comas" />
+    <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
     <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/viajes.css" />
     <link rel="icon" href="multimedia/viajes-favicon.ico" type="image/x-icon"/>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6j4mF6blrc4kZ54S6vYZ2_FpMY9VzyRU" async="" defer=""></script>
 </head>
 
 <body>
@@ -32,8 +35,13 @@ de las palabras clave del mismo separadas por comas" />
         </nav>
     </header>
     <p>
-        Estás en <a href="index.html">Inicio</a> >> Noticias
+        Estás en <a href="index.html">Inicio</a> >> Viajes
     </p>
-    <p>En desarrollo</p>
+    <main>
+        <h2>Mapas</h2>
+        <button onclick="viajes.getStaticMap()">Cargar mapa estático</button>
+        <button onclick="viajes.getDynamicMap()">Cargar mapa dinámico</button>
+    </main>
+    <script src="js/viajes.js"></script>
 </body>
 </html>

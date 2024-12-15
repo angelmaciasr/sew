@@ -4,16 +4,20 @@
 <head>
     <!-- Datos que describen el documento -->
     <meta charset="UTF-8" />
-    <title>F1 DESKTOP - INDEX</title>
+    <title>F1 DESKTOP - CIRCUITO</title>
     <meta name="author" content="Ángel Macías"/>
     <meta name ="description" content ="aquí cada documento debe tener la descripción 
     del contenido concreto del mismo" />
     <meta name ="keywords" content ="aquí cada documento debe tener la lista
-de las palabras clave del mismo separadas por comas" />
-<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+    de las palabras clave del mismo separadas por comas" />
+    <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
     <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/circuito.css" />
     <link rel="icon" href="multimedia/circuito-favicon.ico" type="image/x-icon"/>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6j4mF6blrc4kZ54S6vYZ2_FpMY9VzyRU" async="" defer=""></script>
+    <script src="js/circuito.js"></script>
 </head>
 
 <body>
@@ -26,14 +30,25 @@ de las palabras clave del mismo separadas por comas" />
             <a href="noticias.html">Noticias</a>
             <a href="calendario.html">Calendario</a>
             <a href="meterologia.html">Meteorologia</a>
-            <a href="circuito.html" class="active">Circuito</a>
-            <a href="viajes.html">Viajes</a>
-            <a href="juegos.html">Juegos</a>
+            <a href="circuito.html">Circuito</a>
+            <a href="viajes.php">Viajes</a>
+            <a href="juegos.html" class="active">Juegos</a>
         </nav>
     </header>
     <p>
         Estás en <a href="index.html">Inicio</a> >> Circuito
     </p>
-    <p>En desarrollo</p>
+    <h2>Leer Archivo xml</h2>
+    <p>
+        <input type="file" onchange="circuito.leerXML(this.files);">
+    </p>
+    
+    <h2>Leer Archivo kml</h2>
+    <p>
+        <input type="file" onchange="circuito.getDynamicMap();">
+    </p>
+    <main></main>
+        
+   
 </body>
 </html>

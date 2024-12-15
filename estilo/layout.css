@@ -13,6 +13,7 @@ header{
 /* Especificidad 001*/
 @media screen and (max-width: 799px) {
     header {
+        /*Redefinición de flex-direction para asegurar la adaptabilidad*/
         flex-direction: column;
     }
 }

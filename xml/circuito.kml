@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<name>circuitoEsquema.xml</name>
+<Style id="redLine">
+<LineStyle>
+<color>ff0000ff</color>
+<width>4</width>
+</LineStyle>
+</Style>
+<Placemark>
+<name>Línea de Meta</name>
+<Point>
+<coordinates>-97.642267,30.133531,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Inicio Curva 1</name>
+<Point>
+<coordinates>-97.637717,30.130381,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Mitad Curva 1</name>
+<Point>
+<coordinates>-97.637092,30.130044,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Vértice Curva 1</name>
+<Point>
+<coordinates>-97.636864,30.130036,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Final Curva 1</name>
+<Point>
+<coordinates>-97.636761,30.130175,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Inicio Curva 2</name>
+<Point>
+<coordinates>-97.637325,30.131561,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Mitad Curva 2</name>
+<Point>
+<coordinates>-97.637361,30.131906,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Vértice Curva 2</name>
+<Point>
+<coordinates>-97.637233,30.132303,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Final Curva 2</name>
+<Point>
+<coordinates>-97.636789,30.132708,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Curva 3</name>
+<Point>
+<coordinates>-97.635119,30.133578,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Inicio Curva 4</name>
+<Point>
+<coordinates>-97.634833,30.134225,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Final Curva 4</name>
+<Point>
+<coordinates>-97.634572,30.134461,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Inicio Curva 5</name>
+<Point>
+<coordinates>-97.633972,30.134669,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Final Curva 5</name>
+<Point>
+<coordinates>-97.633739,30.134969,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Inicio Curva 6</name>
+<Point>
+<coordinates>-97.633603,30.135683,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Mitad Curva 6</name>
+<Point>
+<coordinates>-97.632828,30.136161,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Final Curva 6</name>
+<Point>
+<coordinates>-97.632389,30.136208,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Segundo Sector</name>
+<Point>
+<coordinates>-97.631761,30.135967,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Inicio Curva 7</name>
+<Point>
+<coordinates>-97.631253,30.135728,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Final Curva 7</name>
+<Point>
+<coordinates>-97.630944,30.135781,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Inicio Curva 8</name>
+<Point>
+<coordinates>-97.630217,30.136461,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Vértice Curva 8</name>
+<Point>
+<coordinates>-97.629725,30.136669,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Final Curva 8</name>
+<Point>
+<coordinates>-97.629331,30.136511,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Inicio Curva 9</name>
+<Point>
+<coordinates>-97.629156,30.136214,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Final Curva 9</name>
+<Point>
+<coordinates>-97.628925,30.136142,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Curva 10</name>
+<Point>
+<coordinates>-97.627031,30.136489,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Inicio Curva 11</name>
+<Point>
+<coordinates>-97.624628,30.138975,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Vértice Curva 11</name>
+<Point>
+<coordinates>-97.624425,30.13935,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Final Curva 11</name>
+<Point>
+<coordinates>-97.624653,30.139492,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Activación DRS</name>
+<Point>
+<coordinates>-97.627086,30.138803,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Mitad de Recta</name>
+<Point>
+<coordinates>-97.632994,30.137731,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Inicio Curva 12</name>
+<Point>
+<coordinates>-97.636356,30.137425,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Final Curva 12</name>
+<Point>
+<coordinates>-97.636650,30.137211,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Tercer Sector</name>
+<Point>
+<coordinates>-97.635958,30.136481,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Inicio Curva 13</name>
+<Point>
+<coordinates>-97.635447,30.135814,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Final Curva 13</name>
+<Point>
+<coordinates>-97.635467,30.135539,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Inicio Curva 14</name>
+<Point>
+<coordinates>-97.636247,30.135506,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Final Curva 14</name>
+<Point>
+<coordinates>-97.636486,30.1357,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Inicio Curva 15</name>
+<Point>
+<coordinates>-97.636686,30.136164,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Mitad Curva 15</name>
+<Point>
+<coordinates>-97.637125,30.136572,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Vértice Curva 15</name>
+<Point>
+<coordinates>-97.637694,30.136636,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Final Curva 15</name>
+<Point>
+<coordinates>-97.637803,30.136483,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Curva 16</name>
+<Point>
+<coordinates>-97.636781,30.134947,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Curva 17</name>
+<Point>
+<coordinates>-97.637036,30.134064,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Inicio Curva 18</name>
+<Point>
+<coordinates>-97.637978,30.133642,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Vértice Curva 18</name>
+<Point>
+<coordinates>-97.638639,30.133697,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Final Curva 18</name>
+<Point>
+<coordinates>-97.639297,30.134042,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Inicio Curva 19</name>
+<Point>
+<coordinates>-97.640469,30.135464,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Final Curva 19</name>
+<Point>
+<coordinates>-97.640842,30.135533,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Inicio Curva 20</name>
+<Point>
+<coordinates>-97.643306,30.134636,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Vértice Curva 20</name>
+<Point>
+<coordinates>-97.6435,30.134447,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Final Curva 20</name>
+<Point>
+<coordinates>-97.643281,30.134178,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<styleUrl>#redLine</styleUrl>
+<LineString>
+<coordinates>
+-97.642267,30.133531,0
+-97.637717,30.130381,0
+-97.637092,30.130044,0
+-97.636864,30.130036,0
+-97.636761,30.130175,0
+-97.637325,30.131561,0
+-97.637361,30.131906,0
+-97.637233,30.132303,0
+-97.636789,30.132708,0
+-97.635119,30.133578,0
+-97.634833,30.134225,0
+-97.634572,30.134461,0
+-97.633972,30.134669,0
+-97.633739,30.134969,0
+-97.633603,30.135683,0
+-97.632828,30.136161,0
+-97.632389,30.136208,0
+-97.631761,30.135967,0
+-97.631253,30.135728,0
+-97.630944,30.135781,0
+-97.630217,30.136461,0
+-97.629725,30.136669,0
+-97.629331,30.136511,0
+-97.629156,30.136214,0
+-97.628925,30.136142,0
+-97.627031,30.136489,0
+-97.624628,30.138975,0
+-97.624425,30.13935,0
+-97.624653,30.139492,0
+-97.627086,30.138803,0
+-97.632994,30.137731,0
+-97.636356,30.137425,0
+-97.636650,30.137211,0
+-97.635958,30.136481,0
+-97.635447,30.135814,0
+-97.635467,30.135539,0
+-97.636247,30.135506,0
+-97.636486,30.1357,0
+-97.636686,30.136164,0
+-97.637125,30.136572,0
+-97.637694,30.136636,0
+-97.637803,30.136483,0
+-97.636781,30.134947,0
+-97.637036,30.134064,0
+-97.637978,30.133642,0
+-97.638639,30.133697,0
+-97.639297,30.134042,0
+-97.640469,30.135464,0
+-97.640842,30.135533,0
+-97.643306,30.134636,0
+-97.6435,30.134447,0
+-97.643281,30.134178,0
+-97.642267,30.133531,0
+</coordinates>
+</LineString>
+</Placemark>
+</Document>
+</kml>

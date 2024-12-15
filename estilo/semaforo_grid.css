@@ -10,7 +10,7 @@ main {
     margin: auto;
     
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 10em);
     grid-template-rows: 1fr 1fr 1fr;
     gap: 5% 3%;
     align-items: center;
@@ -26,12 +26,6 @@ div {
     border: 5px solid black;
     aspect-ratio: 1;
     border-radius: 50%;
-}
-
-@media screen and (max-width: 600px) {
-    div {
-        aspect-ratio: 0.5;
-    }   
 }
 
 button:first-of-type {

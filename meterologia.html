@@ -4,16 +4,17 @@
 <head>
     <!-- Datos que describen el documento -->
     <meta charset="UTF-8" />
-    <title>F1 DESKTOP - INDEX</title>
+    <title>F1 DESKTOP - METEOROLOGÍA</title>
     <meta name="author" content="Ángel Macías"/>
-    <meta name ="description" content ="aquí cada documento debe tener la descripción 
-    del contenido concreto del mismo" />
-    <meta name ="keywords" content ="aquí cada documento debe tener la lista
-    de las palabras clave del mismo separadas por comas" />
+    <meta name="description" content="Descubre las coordenadas exactas de la línea de meta del Circuito de las Américas en Austin, Texas. 
+    Consulta la previsión meteorológica actualizada para los próximos 5 días, incluyendo temperatura, humedad, precipitaciones y condiciones generales. Ideal para los fans de la Fórmula 1 y los entusiastas de eventos en el circuito.">
+    <meta name="keywords" content="Circuito de Austin, línea de meta Austin, coordenadas Circuito de las Américas, coordenadas línea de meta, 
+    previsión meteorológica Austin, clima Austin, tiempo en Austin, Fórmula 1 Austin, meteorología circuito, Circuito de las Américas, F1 Austin Texas, clima F1">
     <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
     <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
     <link rel="icon" href="multimedia/meteorologia-favicon.ico" type="image/x-icon"/>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="js/pais.js"></script>
 </head>
 
@@ -26,20 +27,20 @@
             <a href="piloto.html">Piloto</a>
             <a href="noticias.html">Noticias</a>
             <a href="calendario.html">Calendario</a>
-            <a href="meterologia.html" class="active">Meteorologia</a>
+            <a href="meterologia.html">Meteorologia</a>
             <a href="circuito.html">Circuito</a>
-            <a href="viajes.html">Viajes</a>
-            <a href="juegos.html">Juegos</a>
+            <a href="viajes.php">Viajes</a>
+            <a href="juegos.html" class="active">Juegos</a>
         </nav>
     </header>
     <p>
         Estás en <a href="index.html">Inicio</a> >> Meteorologia
     </p>
-    <p>En desarrollo</p>
 
     <script>
         var pais = new Pais('EEUU', 'Austin', 331449281)
         pais.writeCoords()
+        pais.getWeather()
     </script>
 </body>
 </html>

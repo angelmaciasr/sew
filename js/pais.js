@@ -42,7 +42,7 @@ class Pais{
         const unidades = "&units=metric";
         const idioma = "&lang=es";
         const apikey = "29798e1d1ac54de694e5d655d7d4753d";
-        const url = "http://api.openweathermap.org/data/2.5/forecast?lat=" + this.coordenadasMeta.latitud +"&lon="+ this.coordenadasMeta.longitud + tipo + unidades + idioma+"&appid=" + apikey;
+        const url = "https://api.openweathermap.org/data/2.5/forecast?lat=" + this.coordenadasMeta.latitud +"&lon="+ this.coordenadasMeta.longitud + tipo + unidades + idioma+"&appid=" + apikey;
 
         $.ajax({
             dataType: "xml",

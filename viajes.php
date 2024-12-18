@@ -86,10 +86,9 @@
     <meta charset="UTF-8" />
     <title>F1 DESKTOP - VIAJES</title>
     <meta name="author" content="Ángel Macías"/>
-    <meta name ="description" content ="aquí cada documento debe tener la descripción 
-    del contenido concreto del mismo" />
-    <meta name ="keywords" content ="aquí cada documento debe tener la lista
-    de las palabras clave del mismo separadas por comas" />
+    <meta name ="description" content ="En este documento puedes encontrar multitud de opciones para tus viajes, como mapas estáticos, dinámicos, el cambio de la moneda local (euros) a la 
+    moneda del país del circuio (dólares) y un carrusel de fotos relacionadas con el país (EEUU)" />
+    <meta name ="keywords" content ="F1, mapa, EEUU, Estados Unidos, Austin, carreras, viajes, mapa estático, mapa dinámico, google maps, carrusel, fotos, moneda, cambio, euros, dólares, $" />
     <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
     <link rel="stylesheet" type="text/css" href="estilo/layout.css" />

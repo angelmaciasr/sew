@@ -22,6 +22,7 @@ h3 {
 }
 
 div {
+    /*Color de primer plano heredado de body*/
     background-color: #000A;
     border: 5px solid black;
     aspect-ratio: 1;
@@ -68,8 +69,9 @@ main.load div:nth-of-type(4) {
 
 /*apagado de luces*/
 @keyframes out {
-    from {background-color: #000A;}
-    to {background-color: #000A;}
+    /* Color de primer plano heredado de body  */
+    /* from {background-color: #000A;}
+    to {background-color: #000A;} */
 }
 
 main.unload div:first-of-type {

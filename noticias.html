@@ -23,25 +23,29 @@
         <nav>
             <a href="index.html">Index</a>
             <a href="piloto.html">Piloto</a>
-            <a href="noticias.html">Noticias</a>
+            <a href="noticias.html" class="active">Noticias</a>
             <a href="calendario.html">Calendario</a>
             <a href="meterologia.html">Meteorologia</a>
             <a href="circuito.html">Circuito</a>
             <a href="viajes.php">Viajes</a>
-            <a href="juegos.html" class="active">Juegos</a>
+            <a href="juegos.html">Juegos</a>
         </nav>
     </header>
     <p>
         Estás en <a href="index.html">Inicio</a> >> Noticias
     </p>
     <p>
-        <input type="file" id="archivoTexto" onchange="noti.readInputFile(this.files);">
+        <label for="archivoTexto">Cargar archivo de noticias</label>
+        <input type="file" id="archivoTexto" name="archivoTexto" onchange="noti.readInputFile(this.files);">
     </p>
     <main></main>
     <p>
-        <input type="text" id="titular" placeholder="TITULAR">
-        <input type="text" id="texto" placeholder="TEXTO">
-        <input type="text" id="autor" placeholder="AUTOR">
+        <label for="titular">Titular</label>
+        <input type="text" id="titular" name="titular" placeholder="TITULAR">
+        <label for="texto">Texto</label>
+        <input type="text" id="texto" name="texto" placeholder="TEXTO">
+        <label for="autor">Autor</label>
+        <input type="text" id="autor" name="autor" placeholder="AUTOR">
     </p>
     <button onclick="noti.addNew()">Añadir noticia</button>
 </body>

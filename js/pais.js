@@ -85,7 +85,7 @@ class Pais{
                 
             },
             error:function(){
-                $("h3").html("¡Tenemos problemas! No puedo obtener XML de <a href='http://openweathermap.org'>OpenWeatherMap</a>"); 
+                $("h3").html("¡Tenemos problemas! No puedo obtener XML de <a href='https://openweathermap.org'>OpenWeatherMap</a>"); 
                 $("h4").remove();
                 $("h5").remove();
                 $("p").remove();

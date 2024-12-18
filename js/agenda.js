@@ -4,7 +4,6 @@ class Agenda {
 
     constructor(){
         this.url = 'https://api.jolpi.ca/ergast/f1/current?format=json';
-        // this.url = "http://ergast.com/api/f1/current.json";
         this.addButton();
     }
 
@@ -17,9 +16,9 @@ class Agenda {
 
     getRaceSchedule(){
         $.ajax({
-            url: 'https://api.jolpi.ca/ergast/f1/current?format=json', // URL de la API
+            url: 'https://api.jolpi.ca/ergast/f1/current?format=json', 
             method: 'GET',
-            dataType: 'json', // Especifica que esperas un JSON
+            dataType: 'json', 
             success: function(data) {
                 console.log(data);
                 var season = data.MRData.RaceTable

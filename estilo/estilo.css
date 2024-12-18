@@ -106,6 +106,7 @@ li, dd{
 dl dt{
     font-weight: bold;
     font-style: italic;
+    /* Color de fondo heredado de section (si el enlace está en alguna seccion) o body (si no está en ninguna)*/
     color: #050A30;
 }
 
@@ -136,6 +137,7 @@ video{
 
 /* Especificidad 012*/
 nav a.active {
+    /* Color de fondo heredado de section (si el enlace está en alguna seccion) o body (si no está en ninguna)*/
     color: #8B0000;  
     font-weight: bold;
 }

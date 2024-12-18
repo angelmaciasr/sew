@@ -30,9 +30,9 @@
             <a href="noticias.html">Noticias</a>
             <a href="calendario.html">Calendario</a>
             <a href="meterologia.html">Meteorologia</a>
-            <a href="circuito.html">Circuito</a>
+            <a href="circuito.html" class="active">Circuito</a>
             <a href="viajes.php">Viajes</a>
-            <a href="juegos.html" class="active">Juegos</a>
+            <a href="juegos.html">Juegos</a>
         </nav>
     </header>
     <p>
@@ -40,12 +40,14 @@
     </p>
     <h2>Leer Archivo xml</h2>
     <p>
-        <input type="file" onchange="circuito.leerXML(this.files);">
+        <label for="archivoXML">Cargar archivo de circuito</label>
+        <input type="file" id="archivoXML" onchange="circuito.leerXML(this.files);">
     </p>
     
     <h2>Leer Archivo kml</h2>
     <p>
-        <input type="file" onchange="circuito.getDynamicMap();">
+        <label for="archivoKML">Cargar archivo de circuito</label>
+        <input type="file" id="archivoKML" onchange="circuito.getDynamicMap();">
     </p>
     <main></main>
         

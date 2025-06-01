@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<name>rutas.xml</name>
+<Style id="redLine">
+<LineStyle>
+<color>ff0000ff</color>
+<width>4</width>
+</LineStyle>
+</Style>
+<Placemark>
+<name>Inicio</name>
+<Point>
+<coordinates>-7.141797,43.409807,36</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Capilla de San Isidro</name>
+<Point>
+<coordinates>-7.150987,43.413164,82</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Villelas d'arriba</name>
+<Point>
+<coordinates>-7.153524,43.418732,103</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Cascada Inferior</name>
+<Point>
+<coordinates>-7.163217,43.421925,139</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Cascada pena do encanto</name>
+<Point>
+<coordinates>-7.167581,43.421718,164</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Villelas d'abajo</name>
+<Point>
+<coordinates>-7.156085,43.416555,142</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<styleUrl>#redLine</styleUrl>
+<LineString>
+<coordinates>
+-7.141797,43.409807,36
+-7.150987,43.413164,82
+-7.153524,43.418732,103
+-7.163217,43.421925,139
+-7.167581,43.421718,164
+-7.156085,43.416555,142
+</coordinates>
+</LineString>
+</Placemark>
+</Document>
+</kml>

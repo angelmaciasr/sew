@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rutas xmlns="http://www.uniovi.es" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.uniovi.es rutas.xsd">
+  
+  <rutaTuristica 
+      nombre="Senda del Eo" 
+      tipo="Senderismo" 
+      medioTransporte="A pie" 
+      fechaInicio="2025-05-01" 
+      horaInicio="09:00:00" 
+      duracion="PT3H" 
+      agencia="Turismo Rural Eo" 
+      personasAdecuadas="Todas las edades" 
+      lugarInicio="La Pruida" 
+      direccionInicio="C. Alameda, 12, 33770 Vegadeo, Asturias">
+    
+    <descripcion>Paseo junto al río Eo, ideal para disfrutar del paisaje fluvial.</descripcion> 
+    <coordenadasInicio longitud="-7.051952" latitud="43.464399" altitud="6"/> <!-- 43.464399, -7.051952-->
+    <referencias>
+      <referencia>ruta1.kml</referencia>
+      <referencia>ruta1.svg</referencia>
+      <referencia>Área de descanso</referencia>
+    </referencias>
+    <recomendacion>8</recomendacion>
+    <hitos>
+      <!-- hito 1 -->
+      <hito nombre="Capilla de Miou"> 
+        <descripcionHito>Capilla de Miou</descripcionHito>
+        <coordenadasHito longitud="-7.058923" latitud="43.465614" altitud="71"/> <!-- 43.465614, -7.058923-->
+        <distancia unidad="km">0.8</distancia>
+        <galeriaFotos>
+          <foto>puente1.jpg</foto>
+          <foto>puente2.jpg</foto>
+        </galeriaFotos>
+      </hito>
+
+      <!-- hito 2 -->
+      <hito nombre="Claro Arroyo"> 
+        <descripcionHito>Claro en el arroyo de Louteiro</descripcionHito>
+        <coordenadasHito longitud="-7.065068" latitud="43.468850" altitud="3"/> <!-- 43.468850, -7.065068-->
+        <distancia unidad="km">0.8</distancia>
+        <galeriaFotos>
+          <foto>puente1.jpg</foto>
+          <foto>puente2.jpg</foto>
+        </galeriaFotos>
+      </hito>
+      
+
+      <!-- hito 3 -->
+      <hito nombre="Frontera con Galicia">
+        <descripcionHito>Camino que divide las provincias de Asturias y Galicia</descripcionHito>
+        <coordenadasHito longitud="-7.069536" latitud="43.468943" altitud="5"/> <!-- 43.468943, -7.069536 -->
+        <distancia unidad="km">0.3</distancia>
+        <galeriaFotos>
+          <foto>mirador.jpg</foto>
+        </galeriaFotos>
+      </hito>
+
+      <!-- hito 4 -->
+      <hito nombre="Internada Bosque">
+        <descripcionHito>Internada bosque</descripcionHito>
+        <coordenadasHito longitud="-7.071660" latitud="43.465463" altitud="4"/> <!-- 43.465463, -7.071660-->
+        <distancia unidad="km">0.4</distancia>
+        <galeriaFotos>
+          <foto>descanso.jpg</foto>
+        </galeriaFotos>
+      </hito>
+
+      <!-- hito 5 -->
+      <hito nombre="Casa de Louterio">
+        <descripcionHito>Ermita Louterio</descripcionHito>
+        <coordenadasHito longitud="-7.066571" latitud="43.461979" altitud="69"/> <!-- 43.461979, -7.066571 -->
+        <distancia unidad="km">0.6</distancia>
+        <galeriaFotos>
+          <foto>final.jpg</foto>
+        </galeriaFotos>
+      </hito>
+
+      <!-- hito 6 -->
+      <hito nombre="Codo de Louterio">
+        <descripcionHito>Camino con forma de codo junto a la ermita Louterio</descripcionHito>
+        <coordenadasHito longitud="-7.065723" latitud="43.460601" altitud="49"/> <!-- 43.460601, -7.065723 -->
+        <distancia unidad="km">0.2</distancia>
+        <galeriaFotos>
+          <foto>final.jpg</foto>
+        </galeriaFotos>
+      </hito>
+
+      <!-- hito 7 -->
+      <hito nombre="Entrada a Miou">
+        <descripcionHito>Entrada a Miou</descripcionHito>
+        <coordenadasHito longitud="-7.061442" latitud="43.461309" altitud="72"/> <!-- 43.461309, -7.061442 -->
+        <distancia unidad="km">0.4</distancia>
+        <galeriaFotos>
+          <foto>final.jpg</foto>
+        </galeriaFotos>
+      </hito>
+    </hitos>
+  </rutaTuristica>
+
+  <!-- Segunda ruta -->
+  <rutaTuristica 
+      nombre="Ruta del Ferrocarril" 
+      tipo="Cultural" 
+      medioTransporte="A pie" 
+      duracion="PT2H30M" 
+      agencia="Cultura Local ST" 
+      personasAdecuadas="Mayores de 12 años" 
+      lugarInicio="Estación antigua" 
+      direccionInicio="Camino de la Estacion, 5">
+    
+    <descripcion>Itinerario por la antigua vía del ferrocarril de Villaodrid a Ribadeo</descripcion>
+    <coordenadasInicio longitud="-7.147217" latitud="43.413911" altitud="92"/> <!-- 43.413911, -7.147217-->
+    <referencias>
+      <referencia>ruta2.kml</referencia>
+      <referencia>ruta2.svg</referencia>
+      <referencia>Vestigios de estaciones</referencia>
+    </referencias>
+    <recomendacion>9</recomendacion>
+    <hitos>
+      <!-- hito 1 -->
+      <hito nombre="Tunel da Volta">
+        <descripcionHito>Antiguo túnel ferroviario de piedra</descripcionHito> 
+        <coordenadasHito longitud="-7.167115" latitud="43.409504" altitud="121"/> <!-- 43.409504, -7.167115-->
+        <distancia unidad="km">2.2</distancia>
+        <galeriaFotos>
+          <foto>tunel.jpg</foto>
+        </galeriaFotos>
+      </hito>
+
+      <!-- hito 2 -->
+      <hito nombre="Tunel da Central">
+        <descripcionHito>Restos del puente metálico</descripcionHito>
+        <coordenadasHito longitud="-7.170070" latitud="43.403441" altitud="106"/> <!-- 43.403441, -7.170070-->
+        <distancia unidad="km">0.9</distancia>
+        <galeriaFotos>
+          <foto>puente_hierro.jpg</foto>
+        </galeriaFotos>
+      </hito>
+
+      <!-- hito 3 -->
+      <hito nombre="Tunel de Pedrido">
+        <descripcionHito>Antigua estación restaurada como museo</descripcionHito>
+        <coordenadasHito longitud="-7.180789" latitud="43.394110" altitud="120"/> <!-- 43.394110, -7.180789-->
+        <distancia unidad="km">1.5</distancia>
+        <galeriaFotos>
+          <foto>estacion.jpg</foto>
+        </galeriaFotos>
+      </hito>
+
+      <!-- hito 4 -->
+      <hito nombre="Tunel de Asela">
+        <descripcionHito>Zona elevada con vistas al Eo</descripcionHito>
+        <coordenadasHito longitud="-7.175306" latitud="43.385112" altitud="129"/> <!-- 43.385112, -7.175306-->
+        <distancia unidad="km">1.3</distancia>
+        <galeriaFotos>
+          <foto>paso.jpg</foto>
+        </galeriaFotos>
+      </hito>
+
+      <!-- hito 5 -->
+      <hito nombre="Fin de ruta">
+        <descripcionHito>Fin junto a cruce de caminos</descripcionHito>
+        <coordenadasHito longitud="-7.170012" latitud="43.381981" altitud="137"/> <!-- 43.381981, -7.170012-->
+        <distancia unidad="km">0.6</distancia>
+        <galeriaFotos>
+          <foto>final2.jpg</foto>
+        </galeriaFotos>
+      </hito>
+    </hitos>
+  </rutaTuristica>
+
+  <!-- Tercera ruta -->
+  <rutaTuristica 
+      nombre="Cascada da Penda do Encanto" 
+      tipo="Natural" 
+      medioTransporte="A pie" 
+      duracion="PT2H45M" 
+      agencia="Eco Rutas" 
+      personasAdecuadas="Familias" 
+      lugarInicio="Capilla de San Juan" 
+      direccionInicio="Bo. Regada, 5">
+    
+    <descripcion>Recorrido circular por bosques y senderos locales</descripcion>
+    <coordenadasInicio longitud="-7.141797" latitud="43.409807" altitud="36"/> <!-- 43.409807, -7.141797-->
+    <referencias>
+      <referencia>ruta3.kml</referencia>
+      <referencia>ruta3.svg</referencia>
+      <referencia>Audio guía disponible</referencia>
+    </referencias>
+    <recomendacion>10</recomendacion>
+    <hitos>
+      <!-- hito 1 -->
+      <hito nombre="Capilla de San Isidro">
+        <descripcionHito>Capilla de San Isidro</descripcionHito>
+        <coordenadasHito longitud="-7.150987" latitud="43.413164" altitud="82"/> <!-- 43.413164, -7.150987 -->
+        <distancia unidad="km">1.1</distancia>
+        <galeriaFotos>
+          <foto>bosque.jpg</foto>
+        </galeriaFotos>
+      </hito>
+
+      <!-- hito 2 -->
+      <hito nombre="Villelas d'arriba">
+        <descripcionHito>Pueblo Villelas D'Arriba</descripcionHito>
+        <coordenadasHito longitud="-7.153524" latitud="43.418732" altitud="103"/> <!-- 43.418732, -7.153524-->
+        <distancia unidad="km">0.8</distancia>
+        <galeriaFotos>
+          <foto>fuente.jpg</foto>
+        </galeriaFotos>
+      </hito>
+
+      <!-- hito 3 -->
+      <hito nombre="Cascada Inferior">
+        <descripcionHito>Área recreativa bajo los árboles</descripcionHito>
+        <coordenadasHito longitud="-7.163217" latitud="43.421925" altitud="139"/> <!-- 43.421925, -7.163217-->
+        <distancia unidad="km">1.55</distancia>
+        <galeriaFotos>
+          <foto>picnic.jpg</foto>
+        </galeriaFotos>
+      </hito>
+
+      <!-- hito 4 -->
+      <hito nombre="Cascada pena do encanto">
+        <descripcionHito>Vista elevada entre árboles</descripcionHito>
+        <coordenadasHito longitud="-7.167581" latitud="43.421718" altitud="164"/> <!-- 43.421718, -7.167581 -->
+        <distancia unidad="km">0.4</distancia>
+        <galeriaFotos>
+          <foto>mirador_bosque.jpg</foto>
+        </galeriaFotos>
+      </hito>
+
+      <!-- hito 5 -->
+      <hito nombre="Villelas d'abajo">
+        <descripcionHito>Fin del recorrido en zona ajardinada</descripcionHito>
+        <coordenadasHito longitud="-7.156085" latitud="43.416555" altitud="142"/> <!-- 43.416555, -7.156085-->
+        <distancia unidad="km">1.5</distancia>
+        <galeriaFotos>
+          <foto>parque.jpg</foto>
+        </galeriaFotos>
+      </hito>
+    </hitos>
+  </rutaTuristica>
+
+</rutas>

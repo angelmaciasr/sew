@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<name>rutas.xml</name>
+<Style id="redLine">
+<LineStyle>
+<color>ff0000ff</color>
+<width>4</width>
+</LineStyle>
+</Style>
+<Placemark>
+<name>Inicio</name>
+<Point>
+<coordinates>-7.147217,43.413911,92</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Túnel da Volta</name>
+<Point>
+<coordinates>-7.167115,43.409504,121</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Túnel da Central</name>
+<Point>
+<coordinates>-7.170070,43.403441,106</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Túnel de Pedrido</name>
+<Point>
+<coordinates>-7.180789,43.394110,120</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Túnel de Asela</name>
+<Point>
+<coordinates>-7.175306,43.385112,129</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Fin de ruta</name>
+<Point>
+<coordinates>-7.170012,43.381981,137</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<styleUrl>#redLine</styleUrl>
+<LineString>
+<coordinates>
+-7.147217,43.413911,92
+-7.167115,43.409504,121
+-7.170070,43.403441,106
+-7.180789,43.394110,120
+-7.175306,43.385112,129
+-7.170012,43.381981,137
+</coordinates>
+</LineString>
+</Placemark>
+</Document>
+</kml>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="2.0">
+<polyline points = "100,590
+100,560.0
+300.0,448.0
+500.0,584.0
+575.0,580.0
+675.0,582.0
+825.0,452.0
+875.0,492.0
+975.0,446.0
+975.0,590
+100,590"
+style="fill:white;stroke:red;stroke-width=4" />
+<text x="100" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+C. Alameda, 12, 33770 Vegadeo, Asturias
+</text>
+<text x="300.0" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+Capilla de Miou
+</text>
+<text x="500.0" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+Claro Arroyo
+</text>
+<text x="575.0" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+Frontera con Galicia
+</text>
+<text x="675.0" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+Internada Bosque
+</text>
+<text x="825.0" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+Casa de Louterio
+</text>
+<text x="875.0" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+Codo de Louterio
+</text>
+<text x="975.0" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+Entrada a Miou
+</text>
+</svg>

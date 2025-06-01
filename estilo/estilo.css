@@ -47,18 +47,13 @@ h3{
 header{
     /* Color de primer plano heredado de body*/
     background-color: #FAD02C;
+    width: 100%;
 }
 
 /* Especificidad 001*/
 section{
     /* Color de primer plano de body*/
     background-color: #EFE7BC;
-}
-
-/* Especificidad 001 */
-article{
-    /* Color de primero plano heredado de body */
-    background-color: lightpink;
 }
 
 /* Especificidad 001*/
@@ -106,7 +101,6 @@ li, dd{
 dl dt{
     font-weight: bold;
     font-style: italic;
-    /* Color de fondo heredado de section (si el enlace está en alguna seccion) o body (si no está en ninguna)*/
     color: #050A30;
 }
 
@@ -135,9 +129,13 @@ video{
     height: auto;
 }
 
+nav {
+    width: 100%;
+    justify-content: space-between;
+}
+
 /* Especificidad 012*/
 nav a.active {
-    /* Color de fondo heredado de section (si el enlace está en alguna seccion) o body (si no está en ninguna)*/
     color: #8B0000;  
     font-weight: bold;
 }

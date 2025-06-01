@@ -33,8 +33,8 @@ def pintarLineaKML(archivo, puntos):
     for punto in puntos: #long, lat
         archivo.write(f'{punto[1]},{punto[2]},{punto[3]}\n')
     
-    #unir el final con el principio
-    archivo.write(f'{puntos[0][1]},{puntos[0][2]},{puntos[0][3]}\n')
+    # #unir el final con el principio
+    # archivo.write(f'{puntos[0][1]},{puntos[0][2]},{puntos[0][3]}\n')
     
     archivo.write('</coordinates>\n')
     archivo.write('</LineString>\n')
@@ -46,8 +46,6 @@ def epilogoKML(archivo):
 
 
 def main():
-
-    # print(main.__doc__)
     fileName = input("Introduzca el nombre del archivo xml    = ")
 
     try:
@@ -58,46 +56,64 @@ def main():
 
     root = ET.parse(fileName).getroot()
 
-    # Procesamiento y generación del archivo kml    
-    outputFileName  = input("Introduzca el nombre del archivo generado (*.kml) = ")
-    try:
-        output = open(outputFileName + ".kml",'w')
-    except IOError:
-        print ('No se puede crear el archivo ', outputFileName + ".kml")
-        exit()
+    rutas = root.findall('.//{http://www.uniovi.es}rutaTuristica')
+    
+    for ruta in rutas:
+        outputFileName  = input("Introduzca el nombre del archivo generado (*.kml) = ")
+        try:
+            output = open(outputFileName + ".kml",'w')
+        except IOError:
+            print ('No se puede crear el archivo ', outputFileName + ".kml")
+            exit()
 
-    # Escribe la cabecera del archivo de output
-    prologoKML(output, fileName)
-    # coordenadas de la cada punto del circuito
-    # Busca los puntos del circuito
-    namespaces = {"ns": "https_//www.uniovi.es"}
-    puntosCircuito = root.findall(".//ns:punto", namespaces)
-    i = 1
-    puntosParaUnir = []
-    for punto in puntosCircuito:
+        # Escribe la cabecera del archivo de output
+        prologoKML(output, fileName)
+
+        i = 1
+        puntosParaUnir = [] 
+
+        # Punto de inicio
+        inicioRuta = ruta.find('.//{http://www.uniovi.es}coordenadasInicio')
+
         p = []
         p.append(i)
+        p.append(inicioRuta.get('longitud'))
+        p.append(inicioRuta.get('latitud'))
+        p.append(inicioRuta.get('altitud'))
 
-        coordenadas = punto.find("ns:coordenadas", namespaces).attrib
-        p.append(coordenadas.get('latitud'))
-        p.append(coordenadas.get('longitud'))
-        p.append('0')
-
-        nombre = punto.find("ns:tramo", namespaces).text
+        nombre = 'Inicio'
 
         pintarPuntoKML(output, p, nombre)
 
         puntosParaUnir.append(p)
         i += 1
 
+        for hito in ruta.findall('.//{http://www.uniovi.es}hitos/{http://www.uniovi.es}hito'):
+            p = []
+            p.append(i)
 
-    pintarLineaKML(output, puntosParaUnir)
-    epilogoKML(output)
-    
-    output.close()
-    entrada.close()
+            coordenadas = hito.find('.//{http://www.uniovi.es}coordenadasHito')
+            p.append(coordenadas.get('longitud'))
+            p.append(coordenadas.get('latitud'))
+            p.append(coordenadas.get('altitud'))
 
-    print("Proceso terminado. Archivo generado: ", outputFileName + ".kml")
+            nombre = hito.get('nombre')
+
+            pintarPuntoKML(output, p, nombre)
+
+            puntosParaUnir.append(p)
+            i += 1
+
+
+        pintarLineaKML(output, puntosParaUnir)
+        epilogoKML(output)
+        
+        output.close()
+        entrada.close()
+
+        print("Proceso terminado. Archivo generado: ", outputFileName + ".kml")
+
+    print("TODAS LAS RUTAS PROCESADAS") 
 
 if __name__ == "__main__":
     main()

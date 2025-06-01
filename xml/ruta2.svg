@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="2.0">
+<polyline points = "100,590
+100,130.0
+650.0,348.0
+875.0,378.0
+1250.0,350.0
+1575.0,332.0
+1725.0,316.0
+1725.0,590
+100,590"
+style="fill:white;stroke:red;stroke-width=4" />
+<text x="100" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+Camino de la Estacion, 5
+</text>
+<text x="650.0" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+Tunel da Volta
+</text>
+<text x="875.0" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+Tunel da Central
+</text>
+<text x="1250.0" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+Tunel de Pedrido
+</text>
+<text x="1575.0" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+Tunel de Asela
+</text>
+<text x="1725.0" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+Fin de ruta
+</text>
+</svg>

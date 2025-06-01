@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<name>rutas.xml</name>
+<Style id="redLine">
+<LineStyle>
+<color>ff0000ff</color>
+<width>4</width>
+</LineStyle>
+</Style>
+<Placemark>
+<name>Inicio</name>
+<Point>
+<coordinates>-7.051952,43.464399,6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Capilla de Miou</name>
+<Point>
+<coordinates>-7.058923,43.465614,71</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Claro Arroyo</name>
+<Point>
+<coordinates>-7.065068,43.468850,3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Frontera con Galicia</name>
+<Point>
+<coordinates>-7.069536,43.468943,5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Internada Bosque</name>
+<Point>
+<coordinates>-7.071660,43.465463,4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Casa de Louterio</name>
+<Point>
+<coordinates>-7.066571,43.461979,69</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Codo de Louterio</name>
+<Point>
+<coordinates>-7.065723,43.460601,49</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Entrada a Miou</name>
+<Point>
+<coordinates>-7.061442,43.461309,72</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<styleUrl>#redLine</styleUrl>
+<LineString>
+<coordinates>
+-7.051952,43.464399,6
+-7.058923,43.465614,71
+-7.065068,43.468850,3
+-7.069536,43.468943,5
+-7.071660,43.465463,4
+-7.066571,43.461979,69
+-7.065723,43.460601,49
+-7.061442,43.461309,72
+</coordinates>
+</LineString>
+</Placemark>
+</Document>
+</kml>

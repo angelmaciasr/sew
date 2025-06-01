@@ -1,55 +1,78 @@
 "use strict";
 
 class Noticias{
-    constructor(){
-        if(!(window.File && window.FileReader && window.FileList && window.Blob)){
-            alert("The navigator DOES NOT support api file")
+   
+  constructor(){
+    this.city = "San Tirso de Abres";
+
+    // API key and URL for eventregistry API
+    this.apikey = "17be1601-c1e0-4d17-83d7-0fcfe784011f";
+    this.url = `https://eventregistry.org/api/v1/article/getArticles`
+
+    // API key and URL for GNews API
+    // this.apikey = "bf32d4ef0ad5f65e25c28a585195bb1f";
+    // this.url = `https://gnews.io/api/v4/search?q=${this.city}&lang=es&country=es&max=5&token=${this.apikey}`;
+  }
+
+  getNoticias(){
+    const city = this.city;
+
+    $.ajax({
+      url: this.url,
+      method: 'POST',
+      contentType: 'application/json',
+      data: JSON.stringify({
+        action: "getArticles",
+        keyword: city,
+        lang: "spa",
+        articlesPage: 1,
+        articlesCount: 5,
+        sortBy: "date",
+        resultType: "articles",
+        apiKey: this.apikey
+      }),
+      success: function (response) {
+        const title = document.createElement('h3');
+        title.innerHTML = `Noticias de ${city}`;
+        document.body.appendChild(title);
+
+        const noticias = response.articles.results;
+        if (noticias.length === 0) {
+          alert(`No hay noticias disponibles para esta ciudad: ${city}.`);
+          return;
         }
-    }
 
-    readInputFile(files){
-        var archivo = files[0]
-        var tipoTexto = /text.*/;
-        if (archivo.type.match(tipoTexto)) 
-        {
-            var lector = new FileReader();
-            lector.onload = function (evento) {
-                //El evento "onload" se lleva a cabo cada vez que se completa con éxito una operación de lectura
-                //La propiedad "result" es donde se almacena el contenido del archivo
-                //Esta propiedad solamente es válida cuando se termina la operación de lectura
-                var texts = lector.result.split("\n");
-                const noticiasContainer = $('main');
+        console.log(noticias);
 
-                texts.forEach(function (text) {
-                    text = text.split("_")
-                    var noticia = `<section><h3>${text[0]}</h3>
-                                    <p>${text[1]}</p>
-                                    <p>- ${text[2]}</p></section>`;
-                    noticiasContainer.append(noticia);
-                });
+        noticias.forEach(noticia => {
+          const noti = document.createElement('section');
 
-                document.body.appendChild(noticiasContainer);
-            }      
-            lector.readAsText(archivo);
-        }
-        else {
-          errorArchivo.innerText = "Error : ¡¡¡ Archivo no válido !!!";
-          }     
-    }
+          const titulo = noticia.title;
+          const fuente = noticia.source.title;
+          const contenido = noticia.body;
+          const fecha = noticia.date;
+          const url = noticia.url;
 
-    addNew(){
-        var titular = document.getElementById('titular').value
-        var texto = document.getElementById('texto').value
-        var autor = document.getElementById('autor').value
+          //autor?
+          let autor = '';
+          if(noticia.authors.length > 0) {
+            autor = noticia.authors[0].name;
+          }
 
-        const container = $('main');
-
-        var noticia = `<section><h3>${titular}</h3>
-                        <p>${texto}</p>
-                        <p>- ${autor}</p></section>`;
+          noti.innerHTML = `<h4>${titulo}  [${fecha}]</h4>
+                          <p>Contenido: ${contenido}</p>
+                          <p>Fuente: ${fuente}</p>
+                          <p>Autor: ${autor}</p>
+                          <a href="${url}" target="_blank">Leer más</a>`; 
         
-        container.append(noticia);
-    }
-}
+          document.body.appendChild(noti);
+        });
+        
+      },
+      error: function (xhr, status, error) {
+        console.error("Error al obtener noticias:", error);
+      }
+    });
+  }
 
-var noti = new Noticias()
+}

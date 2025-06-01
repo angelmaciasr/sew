@@ -1,16 +1,21 @@
 /* Estilo para el carrusel */
 /* Estilo para el carrusel */
+main {
+    width: 100%; /* Ocupa todo el ancho */
+    height: 100vh; /* Aumenta la altura a 120% de la ventana */
+    display: flex; /* Para centrar */
+    align-items: center;
+    justify-content: center;
+}
 
 /* Especificidad 001 */
 article {
-    width: 80%; /* Ocupa todo el ancho */
-    max-width: 80%; /* Asegura no exceder el contenedor */
+    width: 100%; /* Ocupa todo el ancho */
+    max-width: 100%; /* Asegura no exceder el contenedor */
     height: 90vh; /* Incrementa la altura dentro del main */
     position: relative;
     overflow: hidden; /* Oculta el contenido que sale del contenedor */
     border-radius: 1em;
-    align-items: center;
-    justify-self: center;
 }
 
 /* Especificidad 002 */
@@ -23,8 +28,8 @@ article img {
     border-radius: 0.5em;
 }
 
-/* Botones de navegación */
-button[data-action=prev] {
+/* Especificidad 001 */
+button {
     position: absolute;
     width: 3em; /* Botones grandes */
     height: 3em;
@@ -33,25 +38,19 @@ button[data-action=prev] {
     border-radius: 50%;
     z-index: 10;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.8); /* WARNING: Color de primer plano heredado de body*/
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
     font-size: 1.5em;
-    bottom: 1%;
+}
+
+/* Botones de navegación */
+button[data-action=prev] {
+    bottom: 40%;
     left: 1%;
     transform: translateY(0);
 }
 
 button[data-action=next] {
-    position: absolute;
-    width: 3em; /* Botones grandes */
-    height: 3em;
-    padding: 0.5em;
-    border: none;
-    border-radius: 50%;
-    z-index: 10;
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.8);  /* WARNING: Color de primer plano heredado de body*/
-    font-size: 1.5em;
-    bottom: 1%;
+    bottom: 40%;
     right: 1%;
     transform: translateY(0);
 }

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="2.0">
+<polyline points = "100,590
+100,410.0
+375.0,426.0
+575.0,384.0
+962.5,312.0
+1062.5,262.0
+1437.5,306.0
+1437.5,590
+100,590"
+style="fill:white;stroke:red;stroke-width=4" />
+<text x="100" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+Bo. Regada, 5
+</text>
+<text x="375.0" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+Capilla de San Isidro
+</text>
+<text x="575.0" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+Villelas d'arriba
+</text>
+<text x="962.5" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+Cascada Inferior
+</text>
+<text x="1062.5" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+Cascada pena do encanto
+</text>
+<text x="1437.5" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+Villelas d'abajo
+</text>
+</svg>

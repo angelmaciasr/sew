@@ -1,0 +1,34 @@
+<!ELEMENT rutas (rutaTuristica+)>
+<!ELEMENT rutaTuristica (descripcion, coordenadasInicio, referencias, recomendacion, hitos)>
+<!ATTLIST rutaTuristica nombre CDATA #REQUIRED>
+<!ATTLIST rutaTuristica tipo CDATA #REQUIRED>
+<!ATTLIST rutaTuristica medioTransporte CDATA #REQUIRED>
+<!ATTLIST rutaTuristica fechaInicio CDATA #IMPLIED>
+<!ATTLIST rutaTuristica horaInicio CDATA #IMPLIED>
+<!ATTLIST rutaTuristica duracion CDATA #REQUIRED>
+<!ATTLIST rutaTuristica agencia CDATA #REQUIRED>
+<!ELEMENT descripcion (#PCDATA)>
+<!ATTLIST rutaTuristica personasAdecuadas CDATA #REQUIRED>
+<!ATTLIST rutaTuristica lugarInicio CDATA #REQUIRED>
+<!ATTLIST rutaTuristica direccionInicio CDATA #REQUIRED>
+<!ELEMENT coordenadasInicio (#PCDATA)>
+<!ATTLIST coordenadasInicio longitud CDATA #REQUIRED>
+<!ATTLIST coordenadasInicio latitud CDATA #REQUIRED>
+<!ATTLIST coordenadasInicio altitud CDATA #REQUIRED>
+<!ELEMENT referencias (referencia+)>
+<!ELEMENT referencia (#PCDATA)>
+<!ELEMENT recomendacion (#PCDATA)>
+<!ELEMENT hitos (hito+)>
+<!ELEMENT hito (descripcionHito, coordenadasHito, distancia, galeriaFotos, galeriaVideos?)>
+<!ATTLIST hito nombre CDATA #REQUIRED>
+<!ELEMENT descripcionHito (#PCDATA)>
+<!ELEMENT coordenadasHito (#PCDATA)>
+<!ATTLIST coordenadasHito longitud CDATA #REQUIRED>
+<!ATTLIST coordenadasHito latitud CDATA #REQUIRED>
+<!ATTLIST coordenadasHito altitud CDATA #REQUIRED>
+<!ELEMENT distancia (#PCDATA)>
+<!ATTLIST distancia unidad CDATA #REQUIRED>
+<!ELEMENT galeriaFotos (foto+)>
+<!ELEMENT foto (#PCDATA)>
+<!ELEMENT galeriaVideos (video+)>
+<!ELEMENT video (#PCDATA)>

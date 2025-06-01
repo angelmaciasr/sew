@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+<head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8" />
+    <title>San Tirso de Abrés - GASTRONOMÍA</title>
+    <meta name="author" content="Ángel Macías"/>
+    <meta name ="description" content ="aquí cada documento debe tener la descripción 
+    del contenido concreto del mismo" />
+    <meta name ="keywords" content ="aquí cada documento debe tener la lista
+de las palabras clave del mismo separadas por comas" />
+<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+    <link rel="icon" href="multimedia/gastronomia-favicon.ico" type="image/x-icon"/>
+</head>
+
+<body>
+    <!-- Datos con el contenidos que aparece en el navegador -->
+    <header>
+        <h1><a href="index.html">San Tirso de Abrés</a></h1>
+        <nav>
+            <a href="index.html">Index</a>
+            <a href="gastronomia.html" class="active">Gastronomía</a>
+            <a href="rutas.html">Rutas</a>
+            <a href="meteorologia.html">Meteorología</a>
+            <a href="juego.html">Juego</a>
+            <a href="reservas.php">Reservas</a>
+            <a href="ayuda.html">Ayuda</a>
+        </nav>
+    </header>
+
+      <main>
+
+        <section>
+          <h2>Platos Típicos</h2>
+      
+        
+            <h3>Especialidades más reconocidas</h3>
+            <!-- Lista ordenada -->
+            <ol>
+              <li>Fabada asturiana</li>
+              <li>Embutidos caseros</li>
+              <li>Arroz con leche</li>
+            </ol>
+          
+      
+        
+            <h3>Ingredientes más utilizados</h3>
+            <!-- Lista no ordenada con anidada -->
+            <ul>
+              <li>Fabas de granja</li>
+              <li>Morcilla y chorizo
+                <ul>
+                  <li>Morcilla ahumada</li>
+                  <li>Chorizo de matanza</li>
+                </ul>
+              </li>
+              <li>Leche fresca de vaca</li>
+            </ul>
+          
+      
+        
+            <h3>Conceptos Clave de Nuestra Cocina</h3>
+            <!-- Lista de definición -->
+            <dl>
+              <dt>Fabada</dt>
+              <dd>Plato elaborado con fabas, embutidos y tocino, cocinado a fuego lento.</dd>
+      
+              <dt>Embutidos</dt>
+              <dd>Chorizos, morcillas y otros preparados de carne curados de forma artesanal.</dd>
+      
+              <dt>Arroz con leche</dt>
+              <dd>Postre tradicional hecho a base de arroz, leche, azúcar y canela.</dd>
+            </dl>
+          
+        </section>
+      
+        <section>
+          <h2>Productos de San Tirso de Abres</h2>
+      
+          <table>
+            <caption>Productos artesanales de la zona</caption>
+            <thead>
+              <tr>
+                <th scope="col" id="Producto">Producto</th>
+                <th scope="col" id="Procedencia">Procedencia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td headers="Producto">Miel de eucalipto</td>
+                <td headers="Procedencia">Colmenares locales</td>
+              </tr>
+              <tr>
+                <td headers="Producto">Sidra natural</td>
+                <td headers="Procedencia">Lagares de la comarca</td>
+              </tr>
+              <tr>
+                <td headers="Producto">Queso de cabra</td>
+                <td headers="Procedencia">Ganaderías familiares</td>
+              </tr>
+              <tr>
+                <td headers="Producto">Pan de escanda</td>
+                <td headers="Procedencia">Panaderías artesanas</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      
+        <section>
+          <h2>Galería Multimedia</h2>
+
+          <h3>La Fabada de San Tirso</h3>
+          <picture>
+              <source media="(max-width:465px)" srcset="multimedia/fabada-150px.jpg">
+              <source media="(max-width:799px)" srcset="multimedia/fabada-350px.jpg">
+              <source media="(min-width:800px)" srcset="multimedia/fabada.jpg">
+              <img alt="Fabada tradicional servida en una cazuela de barro en San Tirso de Abres." src="multimedia/fabada.jpg">
+          </picture>
+        
+      
+          <h3>Tutorial elaboración del Arroz con Leche</h3>
+          <p>Aquí os dejo un vídeo de cómo elaborar el arroz con leche, uno de los platos icónicos de todo el territorio asturiano y, por lo tanto, de San Tirso de Abrés.</p>
+          <video controls preload="auto">
+            <source src="multimedia/arroz-con-leche-receta.mp4" type="video/mp4">
+            <source src="multimedia/arroz-con-leche-receta.webm" type="video/webm">
+          </video>
+        
+    
+          <h3>Audio de la Feria Gastronómica de San Tirso</h3>
+          <p>Escucha el audio del pregón de la feria gastronómica de San Tirso de Abres.</p>
+          <audio controls>
+            <source src="multimedia/audio-pregon-fiestas.mp3" type="audio/mpeg">
+            <source src="multimedia/audio-pregon-fiestas.wav" type="audio/wav">
+          </audio>
+        </section>
+      
+      </main>
+
+      
+    </body>
+</html>

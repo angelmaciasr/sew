@@ -47,7 +47,7 @@ class Meteorologia{
                                     <li>Precipitación: ${precipitacionValue}  </li></ul>`;
                 
                 
-                const datosWeather = document.createElement('article');
+                const datosWeather = document.createElement('section');
                 datosWeather.innerHTML = `<h2>Meteorología Actual</h2>${stringDatos}`;
                 document.body.appendChild(datosWeather); 
             },
@@ -92,7 +92,7 @@ class Meteorologia{
                                         <li>Amanecer: ${sunrise} h</li>
                                         <li>Anochecer: ${sunset} h</li></ul>`;
 
-                    const datosWeather = document.createElement('article');
+                    const datosWeather = document.createElement('section');
                     datosWeather.innerHTML = stringDatos;
                     document.body.appendChild(datosWeather); 
                 }

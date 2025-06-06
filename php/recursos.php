@@ -4,16 +4,15 @@
 <head>
     <!-- Datos que describen el documento -->
     <meta charset="UTF-8" />
-    <title>San Tirso de Abrés - INDEX</title>
+    <title>San Tirso de Abrés - RESERVAS - RECURSOS TURÍSTICOS</title>
     <meta name="author" content="Ángel Macías"/>
-    <meta name ="description" content ="aquí cada documento debe tener la descripción 
-    del contenido concreto del mismo" />
-    <meta name ="keywords" content ="aquí cada documento debe tener la lista
-de las palabras clave del mismo separadas por comas" />
-<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+    <meta name ="description" content ="Documento perteneciente a la sección de reservas donde el usuario puede visualizar todos los recursos turísticos disponibles" />
+    <meta name ="keywords" content ="recursos, turísticos, San Tirso de Abres, asturias, usuario, actividades, alojamiento, puntos de interés, reserva" />
+    <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="../estilo/estilo.css" />
     <link rel="stylesheet" type="text/css" href="../estilo/layout.css" />
-    <link rel="icon" href="multimedia/index-favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="../estilo/reservas.css" />
+    <link rel="icon" href="../multimedia/reservas-favicon.ico" type="image/x-icon"/>
     <script src="../js/reservas.js"></script>
 </head>
 
@@ -41,6 +40,8 @@ de las palabras clave del mismo separadas por comas" />
             // comprobar que el usuario está logueado
             if(!isset($_SESSION["usuario"])){
                 echo "<p>Por favor, inicia sesión para ver los recursos turísticos.</p>";
+                echo '<p><a href="../reservas.php">Iniciar sesión</a></p>';
+
                 exit;
             }else{
 

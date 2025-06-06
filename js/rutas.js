@@ -7,68 +7,11 @@ class Rutas {
         this.archivosSVG = [];
     }
 
-    getKML() {
-        fetch(`xml/ruta1.kml`)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                
-                return response.text();
-        }).then(kmlText => {
-            const parser = new DOMParser();
-            const xml = parser.parseFromString(kmlText, "application/xml");
-            const placemarks = xml.getElementsByTagName("Placemark");
-
-            const lastPlacemark = placemarks[placemarks.length - 1];
-            const coordinates = lastPlacemark.getElementsByTagName("coordinates")[0];
-            const coords = coordinates.textContent.trim().split("\n"); //array of long,lat,alt
-            
-            this.initMap(coords);
-            // this.getMapaDinamicoGoogle(
-            //     parseFloat(coords[0].split(",")[1]), // latitud
-            //     parseFloat(coords[0].split(",")[0])  // longitud
-            // );
-        }).catch(error => {
-            console.error("Error al obtener el KML: ", error);
-        });
-    }
-
-    // mapa dinámico de Google
-    initMap(coords) {
-
-      const centro = { lat: parseFloat(coords[0].split(",")[1]), lng: parseFloat(coords[0].split(",")[0]) }; // Ejemplo: Madrid
-      const mapContainer = document.createElement("div");
-
-      const map = new google.maps.Map(mapContainer, {
-        zoom: 12,
-        center: centro,
-      });
-
-      for(let i = 0; i < coords.length; i++) {
-        const coord = coords[i].split(",");
-
-        new google.maps.Marker({
-          position: { lat: parseFloat(coord[1]), lng: parseFloat(coord[0]) },
-          map: map,
-          title: `Punto ${i + 1}`
-        });
-      }
-      // Ejemplo: agregar marcador dinámico
-    //   const kmlLayer = new google.maps.KmlLayer({
-    //       url: "https://TU_DOMINIO/rutas.kml", 
-    //       map: map,
-    //     });
-
-      const main = document.getElementsByTagName("main")[0];
-      main.appendChild(document.createElement("h2")).textContent = "Mapa de ruta";
-      main.appendChild(mapContainer);
-
-    }
-
     //leer archivo KML
     leerXML(files){
         var file = files[0];
+
+        const self = this;
 
         const parContainer = document.createElement("article");
         const archivosKMLCopy = [];
@@ -101,20 +44,11 @@ class Rutas {
                     medioTransporteRuta.textContent = `Medio de transporte: ${medioTransporte}`;
                     rutaContainer.appendChild(medioTransporteRuta);
 
-                    let fechaInicio = ruta.getAttribute("fechaInicio");
-                    let fechaInicioRuta = document.createElement("p");
-                    fechaInicioRuta.textContent = `Fecha de inicio: ${fechaInicio}`;
-                    rutaContainer.appendChild(fechaInicioRuta);
-
-                    let horainicio = ruta.getAttribute("horaInicio");
-                    let horaInicioRuta = document.createElement("p");
-                    horaInicioRuta.textContent = `Hora de inicio: ${horainicio}`;
-                    rutaContainer.appendChild(horaInicioRuta);
-
 
                     let duracion = ruta.getAttribute("duracion");
                     let duracionRuta = document.createElement("p");
-                    duracionRuta.textContent = `Duración: ${duracion}`;
+                    let strDuracion = duracion.replace("PT","")
+                    duracionRuta.textContent = `Duración: ${strDuracion}`;
                     rutaContainer.appendChild(duracionRuta);
 
 
@@ -151,7 +85,7 @@ class Rutas {
 
                     let coordenadasInicio = ruta.getElementsByTagName("coordenadasInicio")[0];
                     let coordenadasInicioRuta = document.createElement("p");
-                    coordenadasInicioRuta.textContent = `Coordenadas de inicio: ${coordenadasInicio.longitud}, ${coordenadasInicio.latitud}, ${coordenadasInicio.altitud}`;
+                    coordenadasInicioRuta.textContent = `Coordenadas de inicio: ${coordenadasInicio.attributes[0].textContent}, ${coordenadasInicio.attributes[1].textContent}, ${coordenadasInicio.attributes[2].textContent}`;
                     rutaContainer.appendChild(coordenadasInicioRuta);
 
 
@@ -190,7 +124,7 @@ class Rutas {
 
                         let coordenadasHito = hito.getElementsByTagName("coordenadasHito")[0];
                         let coordenadasHitoElement = document.createElement("p");
-                        coordenadasHitoElement.textContent = `Coordenadas del hito: ${coordenadasHito.longitud}, ${coordenadasHito.latitud}, ${coordenadasHito.altitud}`;
+                        coordenadasHitoElement.textContent = `Coordenadas del hito: ${coordenadasHito.attributes[0].textContent}, ${coordenadasHito.attributes[1].textContent}, ${coordenadasHito.attributes[2].textContent}`;
                         rutaContainer.appendChild(coordenadasHitoElement);
 
 
@@ -206,19 +140,112 @@ class Rutas {
 
                     parContainer.appendChild(rutaContainer);
                 }
+
+                const title = document.getElementsByTagName("h2")[0];
+                const main = document.getElementsByTagName("main")[0];
+                main.insertBefore(parContainer, title.nextSibling);
+
+
+                // this.archivosKML = archivosKMLCopy;
+                // this.archivosSVG = archivosSVGCopy;
+                self.getKML(archivosKMLCopy, archivosSVGCopy);
             }
-
-            const title = document.getElementsByTagName("h2")[0];
-            const main = document.getElementsByTagName("main")[0];
-            main.insertBefore(parContainer, title.nextSibling);
-
-
-            this.archivosKML = archivosKMLCopy;
-            this.archivosSVG = archivosSVGCopy;
-            this.getKML(archivosKMLCopy);
         }
         else {
             errorArchivo.innerText = "Error : ¡¡¡ Archivo no válido !!!";
+        }
+    }
+
+    getKML(archivosKML, archivosSVG) {
+        const main = document.getElementsByTagName("main")[0];
+        main.appendChild(document.createElement("h2")).textContent = "Mapa de rutas";
+
+        for(let i = 0; i < archivosKML.length; i++) {
+            let rutaNombre = archivosKML[i];
+            fetch(`xml/${rutaNombre}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    
+                    return response.text();
+            }).then(kmlText => {
+                const parser = new DOMParser();
+                const xml = parser.parseFromString(kmlText, "application/xml");
+                const placemarks = xml.getElementsByTagName("Placemark");
+
+                const lastPlacemark = placemarks[placemarks.length - 1];
+                const coordinates = lastPlacemark.getElementsByTagName("coordinates")[0];
+                const coords = coordinates.textContent.trim().split("\n"); //array of long,lat,alt
+
+
+                this.initMap(coords, rutaNombre);
+            }).catch(error => {
+                console.error("Error al obtener el KML: ", error);
+            });
+        }   
+
+        //get SVG
+        this.getSVG(archivosSVG);
+        
+
+    }
+
+    // mapa dinámico de Google
+    initMap(coords, mapName) {
+
+      const centro = { lat: parseFloat(coords[0].split(",")[1]), lng: parseFloat(coords[0].split(",")[0]) }; // Ejemplo: Madrid
+      const mapContainer = document.createElement("div");
+
+      const map = new google.maps.Map(mapContainer, {
+        zoom: 12,
+        center: centro,
+      });
+
+      for(let i = 0; i < coords.length; i++) {
+        const coord = coords[i].split(",");
+
+        new google.maps.Marker({
+          position: { lat: parseFloat(coord[1]), lng: parseFloat(coord[0]) },
+          map: map,
+          title: `Punto ${i + 1}`
+        });
+      }
+
+      const main = document.getElementsByTagName("main")[0];
+      const mapSection = document.createElement("section");
+      mapSection.appendChild(document.createElement("h3")).textContent = `Ruta: ${mapName}`;
+      mapSection.appendChild(mapContainer);
+      main.appendChild(mapSection);
+
+    }
+
+    getSVG(archivosSVG) {
+        for(let i=0; i < archivosSVG.length; i++) {
+            let archivoSVG = archivosSVG[i];
+
+            fetch(`xml/${archivoSVG}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then(svgText => {
+                    const main = document.getElementsByTagName("main")[0];
+                    if(i == 0){
+                        main.appendChild(document.createElement("h2")).textContent = "SVG de rutas";
+                    }
+
+                    const container = document.createElement("section");
+                    container.appendChild(document.createElement("h3")).textContent = `Ruta SVG: ${archivoSVG}`;
+
+                    container.innerHTML += svgText; // Añadir el SVG al contenedor correspondiente
+                    main.appendChild(container);
+                })
+                .catch(error => {
+                    console.error("Error al obtener el SVG: ", error);
+                });
         }
     }
 }

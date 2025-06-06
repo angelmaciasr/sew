@@ -4,16 +4,15 @@
 <head>
     <!-- Datos que describen el documento -->
     <meta charset="UTF-8" />
-    <title>San Tirso de Abrés - INDEX</title>
+    <title>San Tirso de Abrés - RESERVAS - RESERVAS USUARIO</title>
     <meta name="author" content="Ángel Macías"/>
-    <meta name ="description" content ="aquí cada documento debe tener la descripción 
-    del contenido concreto del mismo" />
-    <meta name ="keywords" content ="aquí cada documento debe tener la lista
-de las palabras clave del mismo separadas por comas" />
-<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+    <meta name ="description" content ="Documento perteneciente a la sección de reservas donde el usuario puede consultar sus recursos turísticos reservados." />
+    <meta name ="keywords" content ="reserva, recurso turístico, interés, san tirso de abres, usuario" />
+    <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="../estilo/estilo.css" />
     <link rel="stylesheet" type="text/css" href="../estilo/layout.css" />
-    <link rel="icon" href="multimedia/index-favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="../estilo/reservas.css" />
+    <link rel="icon" href="../multimedia/reservas-favicon.ico" type="image/x-icon"/>
 </head>
 
 <body>
@@ -39,6 +38,8 @@ de las palabras clave del mismo separadas por comas" />
             // comprobar que el usuario está logueado
             if(!isset($_SESSION["usuario"])){
                 echo "<p>Por favor, inicia sesión para ver los recursos turísticos.</p>";
+                echo '<p><a href="../reservas.php">Iniciar sesión</a></p>';
+
                 exit;
             }else{
 
@@ -57,20 +58,24 @@ de las palabras clave del mismo separadas por comas" />
                 $resultado = $consultaPre->get_result();
                 $recursos = $resultado->fetch_all(MYSQLI_ASSOC);
 
-                for($index = 0; $index < count($recursos); $index++){
-                    echo "<section>";
-                    echo "<h3> Detalles del Recurso Turístico</h3>";
-                    echo "<p> Nombre: " . $recursos[$index]["nombre"] . "</p>";
-                    echo "<p> Descripción: " . $recursos[$index]["descripcion"] . "</p>";
-                    echo "<h3> Detalles de la Reserva</h3>";
-                    echo "<p> Fecha de Inicio: " . $recursos[$index]["fecha_inicio"] . "</p>";
-                    echo "<p> Fecha de Fin: " . $recursos[$index]["fecha_fin"] . "</p>";
-                    echo "<p> Presupuesto: " . $recursos[$index]["presupuesto"] . "€</p>";
-                    echo "<form method='post'>";
-                    echo "<input type='hidden' name='anular_recurso' value='" . $recursos[$index]["id"] . "'>";
-                    echo "<button type='submit'>Anular</button>";
-                    echo "</form>";
-                    echo "</section>";
+                if(count($recursos) == 0){
+                    echo "<p>No tienes recursos turísticos reservados.</p>";
+                }else{
+                    for($index = 0; $index < count($recursos); $index++){
+                        echo "<section>";
+                        echo "<h3> Detalles del Recurso Turístico</h3>";
+                        echo "<p> Nombre: " . $recursos[$index]["nombre"] . "</p>";
+                        echo "<p> Descripción: " . $recursos[$index]["descripcion"] . "</p>";
+                        echo "<h3> Detalles de la Reserva</h3>";
+                        echo "<p> Fecha de Inicio: " . $recursos[$index]["fecha_inicio"] . "</p>";
+                        echo "<p> Fecha de Fin: " . $recursos[$index]["fecha_fin"] . "</p>";
+                        echo "<p> Presupuesto: " . $recursos[$index]["presupuesto"] . "€</p>";
+                        echo "<form method='post'>";
+                        echo "<input type='hidden' name='anular_recurso' value='" . $recursos[$index]["id"] . "'>";
+                        echo "<button type='submit'>Anular</button>";
+                        echo "</form>";
+                        echo "</section>";
+                    }
                 }
 
                 $consultaPre->close();

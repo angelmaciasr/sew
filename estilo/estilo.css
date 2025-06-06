@@ -21,6 +21,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     color: #000;
     background-color: #FFBD20;
+    font-size: 1.2rem;
 }
 
 /* Especificidad 001, 001, 001*/
@@ -45,33 +46,28 @@ h3{
 
 /* Especificidad 001*/
 header{
-    /* Color de primer plano heredado de body*/
-    background-color: #FAD02C;
+    background-color: #FAD02C; /* Color de primer plano heredado de body*/
     width: 100%;
 }
 
 /* Especificidad 001*/
 section{
-    /* Color de primer plano de body*/
-    background-color: #EFE7BC;
+    background-color: #EFE7BC; /* Color de primer plano de body*/
 }
 
 /* Especificidad 001*/
 aside{
-    /* Color de primer plano heredado de body*/
-    background-color: #74BDCB;
+    background-color: #74BDCB; /* Color de primer plano heredado de body*/
 }
 
 /* Especificidad 011*/
 a:visited{
-    /* Color de fondo heredado de section (si el enlace está en alguna seccion) o body (si no está en ninguna)*/
-    color: #000C66;
+    color: #000C66; /* Color de fondo heredado de section (si el enlace está en alguna seccion) o body (si no está en ninguna)*/
 }
 
 /* Especificidad 011*/
 a:link{
-    /* Color de fondo heredado de section (si el enlace está en alguna seccion) o body (si no está en ninguna)*/
-    color: #0000FF;
+    color: #0000FF; /* Color de fondo heredado de section (si el enlace está en alguna seccion) o body (si no está en ninguna)*/
 }
 
 /* Especificidad 001*/
@@ -101,7 +97,7 @@ li, dd{
 dl dt{
     font-weight: bold;
     font-style: italic;
-    color: #050A30;
+    color: #050A30; /* Color de fondo heredado de body */
 }
 
 /* Especificidad 001*/
@@ -129,6 +125,7 @@ video{
     height: auto;
 }
 
+/* Especificidad 001 */
 nav {
     width: 100%;
     justify-content: space-between;
@@ -136,6 +133,7 @@ nav {
 
 /* Especificidad 012*/
 nav a.active {
-    color: #8B0000;  
+    color: #8B0000; /* Color de fondo heredado de body */
     font-weight: bold;
 }
+

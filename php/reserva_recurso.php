@@ -4,16 +4,16 @@
 <head>
     <!-- Datos que describen el documento -->
     <meta charset="UTF-8" />
-    <title>San Tirso de Abrés - INDEX</title>
+    <title>San Tirso de Abrés - RESERVAS - RESERVA RECURSO</title>
     <meta name="author" content="Ángel Macías"/>
-    <meta name ="description" content ="aquí cada documento debe tener la descripción 
-    del contenido concreto del mismo" />
-    <meta name ="keywords" content ="aquí cada documento debe tener la lista
-de las palabras clave del mismo separadas por comas" />
-<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+    <meta name ="description" content ="Documento perteneciente a la sección de reservas donde el usuario puede confirmar la reserva de un recurso turístico para ciertas fechas
+     y ver su coste." />
+    <meta name ="keywords" content ="reserva, anulación, recurso turístico, interés, san tirso de abres, usuario, fecha, presupuesto, confirmación reserva" />
+    <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="../estilo/estilo.css" />
     <link rel="stylesheet" type="text/css" href="../estilo/layout.css" />
-    <link rel="icon" href="multimedia/index-favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="../estilo/reservas.css" />
+    <link rel="icon" href="../multimedia/reservas-favicon.ico" type="image/x-icon"/>
     <script src="../js/reservas.js"></script>
 </head>
 
@@ -37,10 +37,14 @@ de las palabras clave del mismo separadas por comas" />
         
     <?php
             session_start();
-        
+            $fecha_inicio_recurso = null;
+            $fecha_fin_recurso = null;
+
             // comprobar que el usuario está logueado
             if(!isset($_SESSION["usuario"])){
                 echo "<p>Por favor, inicia sesión para ver los recursos turísticos.</p>";
+                echo '<p><a href="../reservas.php">Iniciar sesión</a></p>';
+
                 exit;
             }else{
                 $id_recurso = $_SESSION["reserva_recurso"];
@@ -73,12 +77,14 @@ de las palabras clave del mismo separadas por comas" />
                         $recurso = $resultado->fetch_assoc();
                         
                         echo "<h3>" . $recurso["nombre"] . "</h3>";
-                        echo "<p> Descripción:" . $recurso["descripcion"] . "</p>";
-                        echo "<p> Número de plazas:" . $recurso["n_plazas"] . "</p>";
-                        echo "<p>Precio: " . $recurso["precio"] . "€</p>";
+                        echo "<p> Descripción: " . $recurso["descripcion"] . "</p>";
+                        echo "<p> Número de plazas: " . $recurso["n_plazas"] . "</p>";
+                        echo "<p> Precio: " . $recurso["precio"] . "€</p>";
                         echo "<p> Inicio: " . $recurso["d_inicio"] . "</p>";
                         echo "<p> Final: " . $recurso["d_final"] . "</p>";
                         
+                        $fecha_inicio_recurso = new DateTime($recurso["d_inicio"]);
+                        $fecha_fin_recurso = new DateTime($recurso["d_final"]);
 
                         //mostrar el selector de fechas
                         echo "<form method='post'>";
@@ -102,21 +108,27 @@ de las palabras clave del mismo separadas por comas" />
                 $fecha_fin = new DateTime($_POST['fecha_fin']);
 
                     // Validar fechas
-                    if ($fecha_inicio >= $fecha_fin) {
+                    if ($fecha_inicio > $fecha_fin) {
                         echo "<p>La fecha de inicio debe ser anterior a la fecha de fin.</p>";
-                    } else {
+                    }
+                    else if($fecha_inicio < $fecha_inicio_recurso || $fecha_fin > $fecha_fin_recurso){
+                        echo "<p>Las fechas seleccionadas no están dentro del rango de disponibilidad del recurso turístico.</p>";
+                    }else if($fecha_inicio < new DateTime() || $fecha_fin < new DateTime()){
+                        echo "<p>Las fechas seleccionadas no pueden ser anteriores a la fecha actual.</p>";
+                    }
+                    else {
                         // Calcular el número de días entre las fechas
                         $dias = $fecha_fin->diff($fecha_inicio)->days;
                         $precio_total = $recurso["precio"] * $dias;
+                        echo "<h3>Detalles Finales Reserva</h3>";
                         echo "<p>Fecha de inicio: " . $fecha_inicio->format("Y-m-d") . "</p>";
                         echo "<p>Fecha de fin: " . $fecha_fin->format("Y-m-d") . "</p>";
                         echo "<p>El presupuesto total para la reserva es: " . $precio_total . "€</p>";
+
                         echo "<form method='post'>";
-                        echo "<input type='hidden' name='confirmar_reserva' value='" . $id_recurso . "'>";
-                        echo "<input type='hidden' name='fecha_inicio' value='" . $fecha_inicio->format("Y-m-d") . "'>";
-                        echo "<input type='hidden' name='fecha_fin' value='" . $fecha_fin->format("Y-m-d") . "'>";
                         echo "<button type='submit'>Confirmar Reserva</button>";
                         echo "</form>";
+
                         $_SESSION["precio_reserva"] = $precio_total;
                         $_SESSION["fecha_inicio_reserva"] = $fecha_inicio->format("Y-m-d");
                         $_SESSION["fecha_fin_reserva"] = $fecha_fin->format("Y-m-d");

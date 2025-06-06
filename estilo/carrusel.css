@@ -1,5 +1,4 @@
-/* Estilo para el carrusel */
-/* Estilo para el carrusel */
+/* Especificidad 001 */
 main {
     width: 100%; /* Ocupa todo el ancho */
     height: 100vh; /* Aumenta la altura a 120% de la ventana */
@@ -38,17 +37,19 @@ button {
     border-radius: 50%;
     z-index: 10;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    background-color: rgba(255, 255, 255, 0.8); /* WARNING: Color de primer plano heredado de body */
     font-size: 1.5em;
 }
 
 /* Botones de navegación */
+/* Especificidad 011 */
 button[data-action=prev] {
     bottom: 40%;
     left: 1%;
     transform: translateY(0);
 }
 
+/* Especificidad 011 */
 button[data-action=next] {
     bottom: 40%;
     right: 1%;

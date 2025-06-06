@@ -69,7 +69,7 @@ class Noticias{
         });
         
       },
-      error: function (xhr, status, error) {
+      error: function (error) {
         console.error("Error al obtener noticias:", error);
       }
     });

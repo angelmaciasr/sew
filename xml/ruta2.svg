@@ -1,31 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" version="2.0">
-<polyline points = "100,590
-100,130.0
-650.0,348.0
-875.0,378.0
-1250.0,350.0
-1575.0,332.0
-1725.0,316.0
-1725.0,590
-100,590"
-style="fill:white;stroke:red;stroke-width=4" />
-<text x="100" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+<polyline points = "10,200
+10,108.0
+197.00000000000003,79.0
+273.5,94.0
+401.0,80.0
+511.5,71.0
+562.5,63.0
+562.5,200
+10,200"
+style="fill:white;stroke:red;stroke-width:2" />
+<text x="10" y="200" style="writing-mode: tb; glyph-orientation-vertical: 0;">
 Camino de la Estacion, 5
 </text>
-<text x="650.0" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+<text x="10" y="108.0">92 m</text>
+<text x="197.00000000000003" y="210" style="writing-mode: tb; glyph-orientation-vertical: 0;">
 Tunel da Volta
 </text>
-<text x="875.0" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+<text x="197.00000000000003" y="79.0">121 m</text>
+<text x="273.5" y="210" style="writing-mode: tb; glyph-orientation-vertical: 0;">
 Tunel da Central
 </text>
-<text x="1250.0" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+<text x="273.5" y="94.0">106 m</text>
+<text x="401.0" y="210" style="writing-mode: tb; glyph-orientation-vertical: 0;">
 Tunel de Pedrido
 </text>
-<text x="1575.0" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+<text x="401.0" y="80.0">120 m</text>
+<text x="511.5" y="210" style="writing-mode: tb; glyph-orientation-vertical: 0;">
 Tunel de Asela
 </text>
-<text x="1725.0" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+<text x="511.5" y="71.0">129 m</text>
+<text x="562.5" y="210" style="writing-mode: tb; glyph-orientation-vertical: 0;">
 Fin de ruta
 </text>
+<text x="562.5" y="63.0">137 m</text>
 </svg>

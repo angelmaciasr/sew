@@ -17,7 +17,7 @@ class Carrusel {
         var car="";
 
         for(var i=0;i<fotos.length;i++) {                 
-            car += `<img src="multimedia/${fotos[i]}" />`;
+            car += `<img src="multimedia/${fotos[i]}" alt="Imagen ${i+1}"/>`;
         }
 
         car += "<button data-action=" + "next" + "> > </button> <button data-action=" + "prev" + "> < </button></article>";

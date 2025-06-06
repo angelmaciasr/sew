@@ -1,31 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" version="2.0">
-<polyline points = "100,590
-100,410.0
-375.0,426.0
-575.0,384.0
-962.5,312.0
-1062.5,262.0
-1437.5,306.0
-1437.5,590
-100,590"
-style="fill:white;stroke:red;stroke-width=4" />
-<text x="100" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+<polyline points = "10,200
+10,164.0
+103.50000000000001,118.0
+171.5,97.0
+303.25,61.0
+337.25,36.0
+464.75,58.0
+464.75,200
+10,200"
+style="fill:white;stroke:red;stroke-width:2" />
+<text x="10" y="200" style="writing-mode: tb; glyph-orientation-vertical: 0;">
 Bo. Regada, 5
 </text>
-<text x="375.0" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+<text x="10" y="164.0">36 m</text>
+<text x="103.50000000000001" y="210" style="writing-mode: tb; glyph-orientation-vertical: 0;">
 Capilla de San Isidro
 </text>
-<text x="575.0" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+<text x="103.50000000000001" y="118.0">82 m</text>
+<text x="171.5" y="210" style="writing-mode: tb; glyph-orientation-vertical: 0;">
 Villelas d'arriba
 </text>
-<text x="962.5" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+<text x="171.5" y="97.0">103 m</text>
+<text x="303.25" y="210" style="writing-mode: tb; glyph-orientation-vertical: 0;">
 Cascada Inferior
 </text>
-<text x="1062.5" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+<text x="303.25" y="61.0">139 m</text>
+<text x="337.25" y="210" style="writing-mode: tb; glyph-orientation-vertical: 0;">
 Cascada pena do encanto
 </text>
-<text x="1437.5" y="600" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+<text x="337.25" y="36.0">164 m</text>
+<text x="464.75" y="210" style="writing-mode: tb; glyph-orientation-vertical: 0;">
 Villelas d'abajo
 </text>
+<text x="464.75" y="58.0">142 m</text>
 </svg>

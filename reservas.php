@@ -6,13 +6,13 @@
     <meta charset="UTF-8" />
     <title>San Tirso de Abrés - RESERVAS</title>
     <meta name="author" content="Ángel Macías"/>
-    <meta name ="description" content ="aquí cada documento debe tener la descripción 
-    del contenido concreto del mismo" />
-    <meta name ="keywords" content ="aquí cada documento debe tener la lista
-de las palabras clave del mismo separadas por comas" />
-<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+    <meta name ="description" content ="Documento principal de la sección de reservas de recursos turísticos de San Tirso de Abres. Aquí el usuario podrá registrarse, iniciar sesión
+     y acceder a las distintas funcionalidades" />
+    <meta name ="keywords" content ="reservas, San Tirso de Abres, asturias, turismo, recursos, usuario, registro, inicio de sesión" />
+    <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
     <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/reservas.css" />
     <link rel="icon" href="multimedia/reservas-favicon.ico" type="image/x-icon"/>
     <script src="js/reservas.js"></script>
 </head>

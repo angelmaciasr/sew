@@ -42,12 +42,12 @@ def main():
         prologoSVG(salida, nombreArchivo)
 
         #Polilinea
-        comienzoPoligonoX = 100
+        comienzoPoligonoX = 10
         coordenadas = ruta.find('.//{http://www.uniovi.es}coordenadasInicio')
-        comienzoAltitud = "590"
+        comienzoAltitud = "200"
         salida.write(str(comienzoPoligonoX) + "," + comienzoAltitud + "\n")
         altitudRuta = coordenadas.get("altitud")
-        salida.write(str(comienzoPoligonoX) + "," + str(float(comienzoAltitud) - float(altitudRuta)*2) + "\n")
+        salida.write(str(comienzoPoligonoX) + "," + str(float(comienzoAltitud) - float(altitudRuta)) + "\n")
 
         hitos = ruta.findall('.//{http://www.uniovi.es}hitos/{http://www.uniovi.es}hito')
         incrementoX = comienzoPoligonoX
@@ -55,8 +55,8 @@ def main():
             coordenadas = hito.find('.//{http://www.uniovi.es}coordenadasHito')
             altitud = coordenadas.get('altitud')
             distancia = hito.find('.//{http://www.uniovi.es}distancia')
-            incrementoX += float(distancia.text)*250 # multiplicar por 500 para identificar la distancia en el SVG
-            salida.write(str(incrementoX) + "," + str(float(comienzoAltitud) - float(altitud)*2) + "\n") # multiplicar por 2 para identificar la altitud en el SVG
+            incrementoX += float(distancia.text)*85 # multiplicar por 5 para identificar la distancia en el SVG
+            salida.write(str(incrementoX) + "," + str(float(comienzoAltitud) - float(altitud)) + "\n") # multiplicar por 2 para identificar la altitud en el SVG
 
         salida.write(str(incrementoX) + "," + comienzoAltitud + "\n") # poner el ultimo punto final para que la línea sea recta
         salida.write(str(comienzoPoligonoX) + "," + comienzoAltitud)
@@ -64,26 +64,26 @@ def main():
 
 
 
-        comienzoTexto = "600"
+        comienzoTexto = "210"
         #Texto polilinea
         textoSVG(salida, str(comienzoPoligonoX), comienzoAltitud, ruta.get('direccionInicio'))
         # escribir la altitud
-        salida.write('<text x="' + str(comienzoPoligonoX) + '" y="' + str(float(comienzoAltitud) - float(altitudRuta)*2) + '">' + altitudRuta + ' m</text>\n')
+        salida.write('<text x="' + str(comienzoPoligonoX) + '" y="' + str(float(comienzoAltitud) - float(altitudRuta)) + '">' + altitudRuta + ' m</text>\n')
 
 
         incrementoX = comienzoPoligonoX
         for hito in hitos:
             nombre = hito.get('nombre')
             distancia = hito.find('.//{http://www.uniovi.es}distancia')
-            incrementoX += float(distancia.text)*250
+            incrementoX += float(distancia.text)*85
             textoSVG(salida, str(incrementoX), comienzoTexto, nombre)
             # escribir la altitud
             coordenadas = hito.find('.//{http://www.uniovi.es}coordenadasHito')
             altitud = coordenadas.get('altitud')
-            salida.write('<text x="' + str(incrementoX) + '" y="' + str(float(comienzoAltitud) - float(altitud)*2) + '">' + altitud + ' m</text>\n')
+            salida.write('<text x="' + str(incrementoX) + '" y="' + str(float(comienzoAltitud) - float(altitud)) + '">' + altitud + ' m</text>\n')
 
         # escribir los 0 metros
-        salida.write('<text x="' + str(comienzoPoligonoX) + '" y="' + str(float(comienzoAltitud) - float(0)*2) + '">0 m</text>\n')
+        # salida.write('<text x="' + str(comienzoPoligonoX) + '" y="' + str(float(comienzoAltitud) - float(0)) + '">0 m</text>\n')
 
         epilogoSVG(salida)
         salida.close()

@@ -1,0 +1,58 @@
+/* Especificidad 001 */
+article {
+  text-align: center; /* Centra el texto dentro del artículo */
+  padding: 2rem;
+}
+
+/* Especificidad 001 */
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+}
+
+/* Especificidad 002 */
+article h3 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+/* Especificidad 002 */
+article div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centra los botones horizontalmente */
+  gap: 2rem; /* Espacio entre botones */
+}
+
+/* Especificidad 001 */
+button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Especificidad 011 */
+button:hover{
+  background-color: rgb(191, 228, 240); /* Color de primer plano heredado de body */
+}
+
+.correcta{
+  background-color: #0fca15; /* Color de primer plano heredado de body */
+}
+
+.incorrecta{
+  background-color: #f32d2d; /* Color de primer plano heredado de body */
+}
+
+
+@media screen and (max-width: 799px) {
+  /* Especificidad 002 */
+  article div{
+    flex-direction: column;
+  }
+}

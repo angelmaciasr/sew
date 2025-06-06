@@ -46,26 +46,41 @@ CREATE TABLE relacion_tipo_recurso(
 );
 
 
--- Valores usuario
-insert into usuario (name, password) values ('admin', 'admin');
+-- Insertar usuarios
+INSERT INTO usuario (name, password) VALUES 
+('admin', 'admin'),
+('maria', 'maria123'),
+('juan', 'juan456');
 
+-- Insertar recursos turísticos
+INSERT INTO recurso_turistico (nombre, n_plazas, d_inicio, d_final, precio, descripcion) VALUES
+('Apartamentos Carola', 10, '2025-10-01', '2025-10-10', 100.00, 'Apartamentos Carola ofrece vistas al río, wifi gratis y pista de tenis.'),
+('Apartamentos Rio Eo', 20, '2025-10-05', '2025-10-15', 150.00, 'Apartamentos Rio Eo tiene vistas al río, wifi gratis y parking privado gratis.'),
+('Camping El Sol', 50, '2025-06-01', '2025-09-30', 40.00, 'Camping familiar cerca del río'),
+('Museo de Historia', 100, '2025-01-01', '2025-12-31', 10.00, 'Museo local con exposiciones históricas'),
+('Ruta del Vino', 25, '2025-04-01', '2025-10-31', 60.00, 'Ruta guiada por bodegas locales'),
+('Restaurante La Cabaña', 30, '2025-01-01', '2025-12-31', 25.00, 'Comida tradicional en entorno rural');
 
--- Valores recurso_turistico
-insert into recurso_turistico (nombre, n_plazas, d_inicio, d_final, precio, descripcion) values ('Hotel 1', 10, '2023-10-01', '2023-10-10', 100.00, 'Hotel de lujo');
-insert into recurso_turistico (nombre, n_plazas, d_inicio, d_final, precio, descripcion) values ('Hotel 2', 20, '2023-10-05', '2023-10-15', 150.00, 'Hotel económico');
+-- Insertar reservas
+INSERT INTO reserva (id_usuario, id_recurso, fecha_inicio, fecha_fin, presupuesto, estado) VALUES
+(1, 1, '2025-10-01', '2025-10-10', 1000.00, 'confirmada'),
+(2, 2, '2025-10-06', '2025-10-10', 600.00, 'anulada'),
+(3, 3, '2025-07-10', '2025-07-20', 400.00, 'confirmada'),
+(1, 5, '2025-05-05', '2025-05-07', 120.00, 'confirmada');
 
+-- Insertar tipos de recurso
+INSERT INTO tipos_recurso (nombre) VALUES 
+('Museo'),
+('Ruta'),
+('Restaurante'),
+('Hotel'),
+('Camping');
 
--- Valores reserva
-insert into reserva (id_usuario, id_recurso, fecha_inicio, fecha_fin, presupuesto, estado) values (1, 1, '2023-10-01', '2023-10-10', 1000.00, 'confirmada');
-
--- Valores tipos_recurso
-insert into tipos_recurso (nombre) values ('Museo');
-insert into tipos_recurso (nombre) values ('Ruta');
-insert into tipos_recurso (nombre) values ('Restaurante');
-insert into tipos_recurso (nombre) values ('Hotel');
-insert into tipos_recurso (nombre) values ('Camping');
-
-
--- Valores relacion_tipo_recurso
-insert into relacion_tipo_recurso (id_recurso, id_tipo_recurso) values (1, 4);
-insert into relacion_tipo_recurso (id_recurso, id_tipo_recurso) values (2, 4);
+-- Insertar relaciones tipo-recurso
+INSERT INTO relacion_tipo_recurso (id_recurso, id_tipo_recurso) VALUES
+(1, 4), -- Hotel 1 -> Hotel
+(2, 4), -- Hotel 2 -> Hotel
+(3, 5), -- Camping -> Camping
+(4, 1), -- Museo -> Museo
+(5, 2), -- Ruta -> Ruta
+(6, 3); -- Restaurante -> Restaurante

@@ -14,6 +14,10 @@ class Rutas {
         const self = this;
 
         const parContainer = document.createElement("article");
+        const h2 = document.createElement("h2");
+        h2.textContent = "Rutas Turísticas";
+        parContainer.appendChild(h2);
+
         const archivosKMLCopy = [];
         const archivosSVGCopy = [];
 

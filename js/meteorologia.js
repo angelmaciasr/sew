@@ -106,60 +106,6 @@ class Meteorologia{
         });
     }
 
-
-    // // Previsión para los próximos 5 días
-    // getWeather(){
-    //     const url = "https://api.openweathermap.org/data/2.5/forecast?lat=" + this.latitud +"&lon="+ this.longitud + this.tipo + this.unidades + this.idioma+"&appid=" + this.apikey;
-
-    //     $.ajax({
-    //         dataType: "xml",
-    //         url: url,
-    //         method: 'GET',
-    //         success: function(datos){
-    //             console.log(datos)
-    //             document.body.appendChild(document.createElement('h2')).innerHTML = "Previsión Meteorológica para los próximos 7 días"
-    //             //Extracción de los datos contenidos en el XML
-    //             const times = $('time', datos)
-    //             times.each(function(){
-    //                 var date = $(this).attr("to").split('T')
-    //                 var acceptable = date[1].split(':')
-    //                 if(acceptable[0] === "12"){
-    //                     var icon                  = $('symbol', this).attr("var");
-    //                     var temperaturaMin        = $("temperature", this).attr("min");
-    //                     var temperaturaMax        = $('temperature',this).attr("max");
-    //                     var temperaturaUnit       = $('temperature',this).attr("unit");
-    //                     var humedad               = $('humidity',this).attr("value");
-    //                     var humedadUnit           = $('humidity',this).attr("unit");
-    //                     var precipitacionValue    = $('precipitation',this).attr("probability");
-    //                     if(precipitacionValue === undefined)
-    //                         precipitacionValue = "N/A"
-
-    //                     var stringDatos = `<h4> <img src="${"https://openweathermap.org/img/w/" + icon + ".png"}" alt="Icono del Tiempo"> ${date[0]}</h4>
-    //                                         <ul>
-    //                                         <li>Temperatura mínima: ${temperaturaMin} ${temperaturaUnit}  </li>
-    //                                         <li>Temperatura máxima: ${temperaturaMax} ${temperaturaUnit}  </li>
-    //                                         <li>Humedad: ${humedad} ${humedadUnit}  </li>
-    //                                         <li>Precipitación: ${precipitacionValue}  </li></ul>`;
-                        
-                        
-    //                     const datosWeather = document.createElement('article');
-    //                     datosWeather.innerHTML = stringDatos;
-    //                     document.body.appendChild(datosWeather); 
-    //                 }
-    //             })
-
-
-
-                
-    //         },
-    //         error:function(){
-    //             $("h3").html("¡Tenemos problemas! No puedo obtener XML de <a href='https://openweathermap.org'>OpenWeatherMap</a>"); 
-    //             $("h4").remove();
-    //             $("h5").remove();
-    //             $("p").remove();
-    //             }
-    //     });
-    // }
 }
 
 var meteorologia = new Meteorologia();

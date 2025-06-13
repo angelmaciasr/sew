@@ -43,102 +43,28 @@
     
 
         <?php
-                session_start();
+            session_start();
 
-                if(isset($_SESSION["usuario"])){
-                    paintOptions();
+            include_once 'php/reservas.php';
+
+            // Instancia de la clase
+            $reservas = new Reserva();
+
+            // Mostrar opciones si el usuario ya ha iniciado sesión
+            if (isset($_SESSION["usuario"])) {
+                echo $reservas->paintOptionsInit();
+            }
+
+            // Manejar peticiones POST
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                if (isset($_POST["registerUser"])) {
+                    $reservas->registrarUsuario($_POST["usuario"], $_POST["password"]);
+                } else {
+                    $reservas->iniciarSesion($_POST["usuario"], $_POST["password"]);
                 }
-                
-                function registrarUsuario($usuario, $password){
-                    
-                    // conexión base de datos
-                    $db = new mysqli("localhost", "DBUSER2025", "DBPWD2025",
-                    "reservas");
-                    if ($db->connect_errno) 
-                        echo "Error de conexión: " . $db->connect_error;
-
-                    // Consultar si existe ese usuario
-                    $consultaPre = $db->prepare("SELECT * FROM usuario WHERE name = ?");
-                    $consultaPre->bind_param("s", $usuario);
-                    $consultaPre->execute();
-                    $resultado = $consultaPre->get_result();
-                    if($resultado->num_rows > 0){
-                        echo "<p>El usuario " . $usuario . " ya existe.</p>";
-                        $consultaPre->close();
-                        $db->close();
-                        exit;
-                    }
-
-
-                    // Registrar usuario
-                    $consultaPre = $db->prepare("INSERT INTO usuario(name, password) values (?, ?)");
-                    $consultaPre->bind_param("ss", $usuario, $password);
-                    if($consultaPre->execute() === TRUE){
-                        $_SESSION["usuario"] = $usuario;
-                        echo paintOptions();
-                    }
-                    else
-                        echo "<p>Error al registrar el usuario " . $usuario . ": " . $consultaPre->error . "</p>";
-            
-                    $consultaPre->close();
-                    $db->close();
-                
-                }
-
-
-                function iniciarSesion($usuario, $password){
-                    // conexión base de datos
-                    $db = new mysqli("localhost", "DBUSER2025", "DBPWD2025",
-                    "reservas");
-                    if ($db->connect_errno) 
-                        echo "Error de conexión: " . $db->connect_error;
-                
-                    // Consultar si existe ese usuario
-                    $consultaPre = $db->prepare("SELECT * FROM usuario WHERE name = ?");
-                    $consultaPre->bind_param("s", $usuario); // Use the function parameter instead of $_POST
-                    $consultaPre->execute();
-                    $resultado = $consultaPre->get_result();
-                    if($resultado->num_rows > 0){
-                        if($fila = $resultado->fetch_assoc()){
-                            if($password === $fila["password"]){
-                                $_SESSION["usuario"] = $usuario;
-                                echo paintOptions();
-                            }else{
-                                echo "<p>Contraseña incorrecta.</p>";
-                            }
-                        }
-                    }else{
-                        echo "<p>El usuario " . $usuario . " no existe.</p>";
-                    }
-                    $consultaPre->close();
-                    $db->close();
-                }
-
-
-                function paintOptions() {
-                    $html = '<script> reservas.removeForm(); </script> ';
-
-                    $html .= '<ul>';
-
-                    $html .= '<li><a href="php/recursos.php">Recursos Turísticos</a></li>';
-                    $html .= '<li><a href="php/reservas_usuario.php">Reservas</a></li>';
-                    $html .= '<li><a href="php/anulaciones.php">Anulaciones</a></li>';
-
-                    $html .= '</ul>';
-
-                    return $html;
-                }
-            
-                if($_SERVER["REQUEST_METHOD"] == "POST"){
-                    if(isset($_POST["registerUser"])){
-                        // Registrar usuario
-                        registrarUsuario($_POST["usuario"], $_POST["password"]);
-                    }else{
-                        iniciarSesion($_POST["usuario"], $_POST["password"]);
-                    }
-                }
-
+            }
         ?>
+
 
     </main>
 

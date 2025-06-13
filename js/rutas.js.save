@@ -51,7 +51,7 @@ class Rutas {
                     let duracion = ruta.getAttribute("duracion");
                     let duracionRuta = document.createElement("p");
                     let strDuracion = duracion.replace("PT","")
-                    strDuracion = strDuracion.replace("H", " horas ").replace("M", " minutos ");
+			strDuracion = strDuracion.replace("H", " horas ").replace("M", " minutos ");
                     duracionRuta.textContent = `Duración: ${strDuracion}`;
                     rutaContainer.appendChild(duracionRuta);
 
@@ -89,7 +89,7 @@ class Rutas {
 
                     let coordenadasInicio = ruta.getElementsByTagName("coordenadasInicio")[0];
                     let coordenadasInicioRuta = document.createElement("p");
-                    coordenadasInicioRuta.textContent = `Coordenadas de inicio (longitud, latitud, altitud): (${coordenadasInicio.attributes[0].textContent}, ${coordenadasInicio.attributes[1].textContent}, ${coordenadasInicio.attributes[2].textContent})`;
+                    coordenadasInicioRuta.textContent = `Coordenadas de inicio: ${coordenadasInicio.attributes[0].textContent}, ${coordenadasInicio.attributes[1].textContent}, ${coordenadasInicio.attributes[2].textContent}`;
                     rutaContainer.appendChild(coordenadasInicioRuta);
 
 
@@ -102,7 +102,7 @@ class Rutas {
                     referenciasRuta.textContent = r.slice(0, -2); // Eliminar la última coma y espacio
                     rutaContainer.appendChild(referenciasRuta);
                     //obtener archivos KML y SVG
-                    archivosKMLCopy.push(referencias.children[0].textContent);
+                    archivosKMLCopy.push(referencias.children[0].textContent)
                     archivosSVGCopy.push(referencias.children[1].textContent);
 
                     let recomendacion = ruta.getElementsByTagName("recomendacion")[0].textContent;
@@ -119,8 +119,8 @@ class Rutas {
                         const hito = hitos[j];
 
                         let nombreHito = hito.getAttribute("nombre");
-                        let nombreHitoElement = document.createElement("h4");
-                        nombreHitoElement.textContent = `Hito: ${nombreHito}`;
+                        let nombreHitoElement = document.createElement("h5");
+                        nombreHitoElement.textContent = `${nombreHito}`;
                         rutaContainer.appendChild(nombreHitoElement);
 
                         let descripcionHito = hito.getElementsByTagName("descripcionHito")[0].textContent;
@@ -131,7 +131,7 @@ class Rutas {
 
                         let coordenadasHito = hito.getElementsByTagName("coordenadasHito")[0];
                         let coordenadasHitoElement = document.createElement("p");
-                        coordenadasHitoElement.textContent = `Coordenadas del hito (longitud, latitud, altitud): (${coordenadasHito.attributes[0].textContent}, ${coordenadasHito.attributes[1].textContent}, ${coordenadasHito.attributes[2].textContent})`;
+                        coordenadasHitoElement.textContent = `Coordenadas del hito: ${coordenadasHito.attributes[0].textContent}, ${coordenadasHito.attributes[1].textContent}, ${coordenadasHito.attributes[2].textContent}`;
                         rutaContainer.appendChild(coordenadasHitoElement);
 
 
@@ -142,9 +142,6 @@ class Rutas {
 
 
                         let galeriaFotos = hito.getElementsByTagName("galeriaFotos")[0];
-                        let galeriaFotosElement = document.createElement("h5");
-                        galeriaFotosElement.textContent = "Galería de fotos:";
-                        rutaContainer.appendChild(galeriaFotosElement);
                         for(let k = 0; k < galeriaFotos.children.length; k++){
                             const foto = galeriaFotos.children[k];
                             let pictureElement = document.createElement("picture");
@@ -176,9 +173,6 @@ class Rutas {
                         
                         let galeriaVideos = hito.getElementsByTagName("galeriaVideos")[0];
                         if(galeriaVideos != null) {
-                            let galeriaVideosElement = document.createElement("h5");
-                            galeriaVideosElement.textContent = "Galería de videos:";
-                            rutaContainer.appendChild(galeriaVideosElement);
                             for(let k = 0; k < galeriaVideos.children.length; k++){
                                 const video = galeriaVideos.children[k];
                                 let videoElement = document.createElement("video");
@@ -197,11 +191,10 @@ class Rutas {
                     parContainer.appendChild(rutaContainer);
                 }
 
-                const title = document.getElementsByTagName("p")[0];
+                const title = document.getElementsByTagName("h2")[0];
                 const main = document.getElementsByTagName("main")[0];
                 main.insertBefore(parContainer, title.nextSibling);
 
-                main.removeChild(title);
                 self.getKML(archivosKMLCopy, archivosSVGCopy);
             }
         }
@@ -239,8 +232,10 @@ class Rutas {
             });
         }   
 
-        // Obtener SVGs
+        //get SVG
         this.getSVG(archivosSVG);
+        
+
     }
 
     // mapa dinámico de Google

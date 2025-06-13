@@ -1,14 +1,14 @@
 import xml.etree.ElementTree as ET
 
 
-def prologoSVG(archivo, nombre):
-    archivo.write('<?xml version="1.0" encoding="UTF-8"?>\n')
-    archivo.write('<svg xmlns="http://www.w3.org/2000/svg" version="1.1">\n')
+def prologoSVG(archivo, maxX, maxY):
+    # <svg viewBox="0 0 357.5 410" xmlns="http://www.w3.org/2000/svg">
+    archivo.write(f'<svg viewBox="0 0 {maxX} {maxY}" xmlns="http://www.w3.org/2000/svg">\n')
     archivo.write('<polyline points = "')
 
 def epilogoPolilineaSVG(archivo):
     archivo.write('"\n')
-    archivo.write('style="fill:white;stroke:red;stroke-width:2" />\n')
+    archivo.write('style="fill:lightyellow;stroke:red;stroke-width:2" />\n')
 
 def epilogoSVG(archivo):
     archivo.write("</svg>\n")
@@ -39,32 +39,43 @@ def main():
             print ('No se puede crear el archivo ', nombreSalida + ".kml")
             exit()
 
-        prologoSVG(salida, nombreArchivo)
+        # Obtener Datos
+        coordenadas = ruta.find('.//{http://www.uniovi.es}coordenadasInicio')
+        hitos = ruta.findall('.//{http://www.uniovi.es}hitos/{http://www.uniovi.es}hito')
+
+
+
+        comienzoTexto = "210" # altura máxima
 
         #Polilinea
         comienzoPoligonoX = 10
-        coordenadas = ruta.find('.//{http://www.uniovi.es}coordenadasInicio')
+        
         comienzoAltitud = "200"
-        salida.write(str(comienzoPoligonoX) + "," + comienzoAltitud + "\n")
+        svgText = ""
+        svgText += str(comienzoPoligonoX) + "," + comienzoAltitud + "\n"
         altitudRuta = coordenadas.get("altitud")
-        salida.write(str(comienzoPoligonoX) + "," + str(float(comienzoAltitud) - float(altitudRuta)) + "\n")
+        svgText += str(comienzoPoligonoX) + "," + str(float(comienzoAltitud) - float(altitudRuta)) + "\n"
 
-        hitos = ruta.findall('.//{http://www.uniovi.es}hitos/{http://www.uniovi.es}hito')
+        
         incrementoX = comienzoPoligonoX
+        ultimoHito = hitos[-1] if hitos else None
         for hito in hitos:
             coordenadas = hito.find('.//{http://www.uniovi.es}coordenadasHito')
             altitud = coordenadas.get('altitud')
             distancia = hito.find('.//{http://www.uniovi.es}distancia')
             incrementoX += float(distancia.text)*85 # multiplicar por 5 para identificar la distancia en el SVG
-            salida.write(str(incrementoX) + "," + str(float(comienzoAltitud) - float(altitud)) + "\n") # multiplicar por 2 para identificar la altitud en el SVG
+            svgText += str(incrementoX) + "," + str(float(comienzoAltitud) - float(altitud)) + "\n" # multiplicar por 2 para identificar la altitud en el SVG
+
+            if( hito == ultimoHito ):
+                prologoSVG(salida, str(incrementoX + 100), str(float(comienzoTexto) +200))
+
+        salida.write(svgText)
 
         salida.write(str(incrementoX) + "," + comienzoAltitud + "\n") # poner el ultimo punto final para que la línea sea recta
         salida.write(str(comienzoPoligonoX) + "," + comienzoAltitud)
         epilogoPolilineaSVG(salida)
 
 
-
-        comienzoTexto = "210"
         #Texto polilinea
         textoSVG(salida, str(comienzoPoligonoX), comienzoAltitud, ruta.get('direccionInicio'))
         # escribir la altitud

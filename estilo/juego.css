@@ -37,14 +37,16 @@ button {
 }
 
 /* Especificidad 011 */
-button:hover{
+button.normal:hover{
   background-color: rgb(191, 228, 240); /* Color de primer plano heredado de body */
 }
 
+/* Especificidad 001 */
 .correcta{
   background-color: #0fca15; /* Color de primer plano heredado de body */
 }
 
+/* Especificidad 001 */
 .incorrecta{
   background-color: #f32d2d; /* Color de primer plano heredado de body */
 }

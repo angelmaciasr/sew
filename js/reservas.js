@@ -20,6 +20,7 @@ class Reservas {
         let inputUser = document.createElement("input");
         inputUser.setAttribute("type", "text");
         inputUser.setAttribute("name", "usuario");
+        inputUser.setAttribute("id", "usuario");
         inputUser.setAttribute("required", "required");
 
         form.appendChild(inputUser);
@@ -34,6 +35,7 @@ class Reservas {
         let inputPassword = document.createElement("input");
         inputPassword.setAttribute("type", "password");
         inputPassword.setAttribute("name", "password");
+        inputPassword.setAttribute("id", "password");
         inputPassword.setAttribute("required", "required");
 
         form.appendChild(inputPassword);
@@ -73,6 +75,11 @@ class Reservas {
         const main = document.querySelector("main");
         const buttons = main.querySelectorAll("button");
         buttons.forEach(button => button.remove());
+    }
+
+
+    showMessage(message){
+        console.log(message);
     }
 
 }

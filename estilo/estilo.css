@@ -24,6 +24,11 @@ body{
     font-size: 1.2rem;
 }
 
+/* Especificidad 001 */
+article{
+    background-color: #f5c24c; /* Color de primer plano heredado de body */
+}
+
 /* Especificidad 001, 001, 001*/
 h1,h2,h3{
     font-family: Papyrus, fantasy, serif;
@@ -42,6 +47,16 @@ h2{
 /* Especificidad 001*/
 h3{
     font-size: 1.25em;
+}
+
+/*Especificidad 001*/
+h4{
+    font-size: 1.15em;
+}
+
+/* Especificidad 001*/
+h5{
+    font-size: 1.05em;
 }
 
 /* Especificidad 001*/
@@ -102,15 +117,15 @@ dl dt{
 
 /* Especificidad 001*/
 th{
-    background-color: #FFFFFF;
+    background-color: rgb(235, 200, 125);
     color: #000;
     font-weight: bold;
 }
 
 /* Especificidad 001*/
 td{
-    background-color: #242628;
-    color: #fff;
+    background-color: rgb(235, 200, 125);
+    color: #000;
     
 }
 
@@ -121,7 +136,9 @@ h1 > a{
 
 /* Especificidad 001*/
 video{
-    width: 90%;
+    width: 50%;
+    min-width: 10rem;
+    max-width: 32rem;
     height: auto;
 }
 

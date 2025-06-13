@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg viewBox="0 0 564.75 410.0" xmlns="http://www.w3.org/2000/svg">
 <polyline points = "10,200
 10,164.0
 103.50000000000001,118.0
@@ -9,7 +8,7 @@
 464.75,58.0
 464.75,200
 10,200"
-style="fill:white;stroke:red;stroke-width:2" />
+style="fill:lightyellow;stroke:red;stroke-width:2" />
 <text x="10" y="200" style="writing-mode: tb; glyph-orientation-vertical: 0;">
 Bo. Regada, 5
 </text>

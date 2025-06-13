@@ -8,8 +8,8 @@
       medioTransporte="A pie" 
       fechaInicio="2025-05-01" 
       horaInicio="09:00:00" 
-      duracion="PT3H" 
-      agencia="Turismo Rural Eo" 
+      duracion="PT1H35M" 
+      agencia="Naturaller" 
       personasAdecuadas="Todas las edades" 
       lugarInicio="La Pruida" 
       direccionInicio="C. Alameda, 12, 33770 Vegadeo, Asturias">
@@ -19,7 +19,7 @@
     <referencias>
       <referencia>ruta1.kml</referencia>
       <referencia>ruta1.svg</referencia>
-      <referencia>Área de descanso</referencia>
+      <referencia>https://es.wikiloc.com/rutas-senderismo/senda-de-la-ria-del-eo-vegadeo-52803854</referencia>
     </referencias>
     <recomendacion>8</recomendacion>
     <hitos>
@@ -29,8 +29,7 @@
         <coordenadasHito longitud="-7.058923" latitud="43.465614" altitud="71"/> <!-- 43.465614, -7.058923-->
         <distancia unidad="km">0.8</distancia>
         <galeriaFotos>
-          <foto>puente1.jpg</foto>
-          <foto>puente2.jpg</foto>
+          <foto>capilla-de-miou.jpg</foto>
         </galeriaFotos>
       </hito>
 
@@ -40,8 +39,7 @@
         <coordenadasHito longitud="-7.065068" latitud="43.468850" altitud="3"/> <!-- 43.468850, -7.065068-->
         <distancia unidad="km">0.8</distancia>
         <galeriaFotos>
-          <foto>puente1.jpg</foto>
-          <foto>puente2.jpg</foto>
+          <foto>claro-arroyo.jpg</foto>
         </galeriaFotos>
       </hito>
       
@@ -52,7 +50,7 @@
         <coordenadasHito longitud="-7.069536" latitud="43.468943" altitud="5"/> <!-- 43.468943, -7.069536 -->
         <distancia unidad="km">0.3</distancia>
         <galeriaFotos>
-          <foto>mirador.jpg</foto>
+          <foto>frontera-galicia.png</foto>
         </galeriaFotos>
       </hito>
 
@@ -62,27 +60,27 @@
         <coordenadasHito longitud="-7.071660" latitud="43.465463" altitud="4"/> <!-- 43.465463, -7.071660-->
         <distancia unidad="km">0.4</distancia>
         <galeriaFotos>
-          <foto>descanso.jpg</foto>
+          <foto>internada-bosque.png</foto>
         </galeriaFotos>
       </hito>
 
       <!-- hito 5 -->
-      <hito nombre="Casa de Louterio">
-        <descripcionHito>Ermita Louterio</descripcionHito>
+      <hito nombre="Casa de Louteiro">
+        <descripcionHito>Ermita louteiro</descripcionHito>
         <coordenadasHito longitud="-7.066571" latitud="43.461979" altitud="69"/> <!-- 43.461979, -7.066571 -->
         <distancia unidad="km">0.6</distancia>
         <galeriaFotos>
-          <foto>final.jpg</foto>
+          <foto>casa-de-louteiro.jpg</foto>
         </galeriaFotos>
       </hito>
 
       <!-- hito 6 -->
-      <hito nombre="Codo de Louterio">
-        <descripcionHito>Camino con forma de codo junto a la ermita Louterio</descripcionHito>
+      <hito nombre="Codo de Louteiro">
+        <descripcionHito>Camino con forma de codo junto a la ermita Louteiro</descripcionHito>
         <coordenadasHito longitud="-7.065723" latitud="43.460601" altitud="49"/> <!-- 43.460601, -7.065723 -->
         <distancia unidad="km">0.2</distancia>
         <galeriaFotos>
-          <foto>final.jpg</foto>
+          <foto>codo-de-louteiro.png</foto>
         </galeriaFotos>
       </hito>
 
@@ -92,7 +90,7 @@
         <coordenadasHito longitud="-7.061442" latitud="43.461309" altitud="72"/> <!-- 43.461309, -7.061442 -->
         <distancia unidad="km">0.4</distancia>
         <galeriaFotos>
-          <foto>final.jpg</foto>
+          <foto>final-senda-eo.png</foto>
         </galeriaFotos>
       </hito>
     </hitos>
@@ -100,21 +98,21 @@
 
   <!-- Segunda ruta -->
   <rutaTuristica 
-      nombre="Ruta del Ferrocarril" 
+      nombre="Senda del Ferrocarril" 
       tipo="Cultural" 
       medioTransporte="A pie" 
       duracion="PT2H30M" 
-      agencia="Cultura Local ST" 
+      agencia="Naturaller" 
       personasAdecuadas="Mayores de 12 años" 
       lugarInicio="Estación antigua" 
       direccionInicio="Camino de la Estacion, 5">
     
-    <descripcion>Itinerario por la antigua vía del ferrocarril de Villaodrid a Ribadeo</descripcion>
+    <descripcion>Itinerario por la antigua vía del ferrocarril de Villaodrid a Ribadeo, reconstruida para convertirse en una ruta peatonal</descripcion>
     <coordenadasInicio longitud="-7.147217" latitud="43.413911" altitud="92"/> <!-- 43.413911, -7.147217-->
     <referencias>
       <referencia>ruta2.kml</referencia>
       <referencia>ruta2.svg</referencia>
-      <referencia>Vestigios de estaciones</referencia>
+      <referencia>https://es.wikiloc.com/rutas-senderismo/via-verde-del-eo-ruta-del-ferrocarril-san-tirso-de-abres-2357725</referencia>
     </referencias>
     <recomendacion>9</recomendacion>
     <hitos>
@@ -124,7 +122,7 @@
         <coordenadasHito longitud="-7.167115" latitud="43.409504" altitud="121"/> <!-- 43.409504, -7.167115-->
         <distancia unidad="km">2.2</distancia>
         <galeriaFotos>
-          <foto>tunel.jpg</foto>
+          <foto>tunel-da-volta.jpg</foto>
         </galeriaFotos>
       </hito>
 
@@ -134,8 +132,11 @@
         <coordenadasHito longitud="-7.170070" latitud="43.403441" altitud="106"/> <!-- 43.403441, -7.170070-->
         <distancia unidad="km">0.9</distancia>
         <galeriaFotos>
-          <foto>puente_hierro.jpg</foto>
+          <foto>tunel-da-central.jpg</foto>
         </galeriaFotos>
+        <galeriaVideos>
+          <video>video-tunel.mp4</video>
+        </galeriaVideos>
       </hito>
 
       <!-- hito 3 -->
@@ -144,7 +145,7 @@
         <coordenadasHito longitud="-7.180789" latitud="43.394110" altitud="120"/> <!-- 43.394110, -7.180789-->
         <distancia unidad="km">1.5</distancia>
         <galeriaFotos>
-          <foto>estacion.jpg</foto>
+          <foto>tunel-de-pedrido.jpg</foto>
         </galeriaFotos>
       </hito>
 
@@ -154,7 +155,7 @@
         <coordenadasHito longitud="-7.175306" latitud="43.385112" altitud="129"/> <!-- 43.385112, -7.175306-->
         <distancia unidad="km">1.3</distancia>
         <galeriaFotos>
-          <foto>paso.jpg</foto>
+          <foto>tunel-de-asela.jpg</foto>
         </galeriaFotos>
       </hito>
 
@@ -164,7 +165,7 @@
         <coordenadasHito longitud="-7.170012" latitud="43.381981" altitud="137"/> <!-- 43.381981, -7.170012-->
         <distancia unidad="km">0.6</distancia>
         <galeriaFotos>
-          <foto>final2.jpg</foto>
+          <foto>final-senda-ferrocarril.jpg</foto>
         </galeriaFotos>
       </hito>
     </hitos>
@@ -172,11 +173,11 @@
 
   <!-- Tercera ruta -->
   <rutaTuristica 
-      nombre="Cascada da Penda do Encanto" 
+      nombre="Cascada da Pena do Encanto" 
       tipo="Natural" 
       medioTransporte="A pie" 
       duracion="PT2H45M" 
-      agencia="Eco Rutas" 
+      agencia="Naturaller" 
       personasAdecuadas="Familias" 
       lugarInicio="Capilla de San Juan" 
       direccionInicio="Bo. Regada, 5">
@@ -186,7 +187,7 @@
     <referencias>
       <referencia>ruta3.kml</referencia>
       <referencia>ruta3.svg</referencia>
-      <referencia>Audio guía disponible</referencia>
+      <referencia>https://es.wikiloc.com/rutas-senderismo/cascada-seimeria-da-penda-do-encanto-san-tirso-de-abres-asturias-91114924</referencia>
     </referencias>
     <recomendacion>10</recomendacion>
     <hitos>
@@ -196,7 +197,7 @@
         <coordenadasHito longitud="-7.150987" latitud="43.413164" altitud="82"/> <!-- 43.413164, -7.150987 -->
         <distancia unidad="km">1.1</distancia>
         <galeriaFotos>
-          <foto>bosque.jpg</foto>
+          <foto>capilla-san-isidro.jpg</foto>
         </galeriaFotos>
       </hito>
 
@@ -206,7 +207,7 @@
         <coordenadasHito longitud="-7.153524" latitud="43.418732" altitud="103"/> <!-- 43.418732, -7.153524-->
         <distancia unidad="km">0.8</distancia>
         <galeriaFotos>
-          <foto>fuente.jpg</foto>
+          <foto>villelas-darriba.png</foto>
         </galeriaFotos>
       </hito>
 
@@ -216,7 +217,7 @@
         <coordenadasHito longitud="-7.163217" latitud="43.421925" altitud="139"/> <!-- 43.421925, -7.163217-->
         <distancia unidad="km">1.55</distancia>
         <galeriaFotos>
-          <foto>picnic.jpg</foto>
+          <foto>cascada-inferior.jpg</foto>
         </galeriaFotos>
       </hito>
 
@@ -226,7 +227,7 @@
         <coordenadasHito longitud="-7.167581" latitud="43.421718" altitud="164"/> <!-- 43.421718, -7.167581 -->
         <distancia unidad="km">0.4</distancia>
         <galeriaFotos>
-          <foto>mirador_bosque.jpg</foto>
+          <foto>cascada-pena-do-encanto.jpg</foto>
         </galeriaFotos>
       </hito>
 
@@ -236,7 +237,7 @@
         <coordenadasHito longitud="-7.156085" latitud="43.416555" altitud="142"/> <!-- 43.416555, -7.156085-->
         <distancia unidad="km">1.5</distancia>
         <galeriaFotos>
-          <foto>parque.jpg</foto>
+          <foto>villelas-dabajo.png</foto>
         </galeriaFotos>
       </hito>
     </hitos>

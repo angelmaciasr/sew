@@ -1,24 +1,46 @@
-button{
-  font-size: 1.2rem;
-  margin-left: 4rem;
-}
-
+/* Especificidad 001*/
 li{
   margin-top: 1.5rem;
 }
 
+/* Especificidad 001*/
 form{
+  width: 80%;
   margin-top: 2rem;
   font-size: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
+/* Especificidad 002*/
 form input{
-  font-size: 1.2rem;
-  margin-right: 2rem;
+  width: 10%;
+  min-width: 15rem;
+  margin: 1rem;
+}
+
+/* Especificidad 001*/
+button{
+  width: 15%;
+  min-width: 15rem;
+  margin: 1rem;
+}
+
+/*Especificidad 001*/
+section{
+  border-color: black;
+  border-style: solid;
+  padding: 1rem;
 }
 
 
-form label{
-  margin-left: 3rem;
-  margin-right: 1rem;
+@media screen and (max-width: 999px) {
+  /* Especificidad 001*/
+  form{
+      flex-direction: column; /* Redefinición para pantallas pequeñas */
+      gap: 1rem;
+  }
+
 }

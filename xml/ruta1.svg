@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg viewBox="0 0 407.5 410.0" xmlns="http://www.w3.org/2000/svg">
 <polyline points = "10,200
 10,194.0
 78.0,129.0
@@ -11,7 +10,7 @@
 307.5,128.0
 307.5,200
 10,200"
-style="fill:white;stroke:red;stroke-width:2" />
+style="fill:lightyellow;stroke:red;stroke-width:2" />
 <text x="10" y="200" style="writing-mode: tb; glyph-orientation-vertical: 0;">
 C. Alameda, 12, 33770 Vegadeo, Asturias
 </text>
@@ -33,11 +32,11 @@ Internada Bosque
 </text>
 <text x="205.5" y="196.0">4 m</text>
 <text x="256.5" y="210" style="writing-mode: tb; glyph-orientation-vertical: 0;">
-Casa de Louterio
+Casa de Louteiro
 </text>
 <text x="256.5" y="131.0">69 m</text>
 <text x="273.5" y="210" style="writing-mode: tb; glyph-orientation-vertical: 0;">
-Codo de Louterio
+Codo de Louteiro
 </text>
 <text x="273.5" y="151.0">49 m</text>
 <text x="307.5" y="210" style="writing-mode: tb; glyph-orientation-vertical: 0;">

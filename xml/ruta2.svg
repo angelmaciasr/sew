@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg viewBox="0 0 662.5 410.0" xmlns="http://www.w3.org/2000/svg">
 <polyline points = "10,200
 10,108.0
 197.00000000000003,79.0
@@ -9,7 +8,7 @@
 562.5,63.0
 562.5,200
 10,200"
-style="fill:white;stroke:red;stroke-width:2" />
+style="fill:lightyellow;stroke:red;stroke-width:2" />
 <text x="10" y="200" style="writing-mode: tb; glyph-orientation-vertical: 0;">
 Camino de la Estacion, 5
 </text>

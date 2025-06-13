@@ -1,4 +1,4 @@
-  <!DOCTYPE HTML>
+<!DOCTYPE HTML>
 
 <html lang="es">
 <head>
@@ -31,9 +31,11 @@
     </header>
 
     <main>
-
     <?php
             session_start();
+
+            require_once 'reservas.php';
+            $reservas = new Reserva();
 
             // comprobar que el usuario está logueado
             if(!isset($_SESSION["usuario"])){
@@ -41,90 +43,27 @@
                 echo '<p><a href="../reservas.php">Iniciar sesión</a></p>';
 
                 exit;
-            }else{
-
-                echo paintOptions();
-
-                echo "<h2>Reservas</h2>";
-
-                $db = new mysqli("localhost", "DBUSER2025", "DBPWD2025",
-                "reservas");
-                if ($db->connect_errno) 
-                    echo "Error de conexión: " . $db->connect_error;
-
-                $consultaPre = $db->prepare("SELECT r.id, rt.nombre, rt.descripcion, r.fecha_inicio, r.fecha_fin, r.presupuesto FROM recurso_turistico rt, usuario u, reserva r WHERE u.id = r.id_usuario AND r.id_recurso = rt.id AND u.name = ? AND r.estado = 'confirmada'");
-                $consultaPre->bind_param("s", $_SESSION["usuario"]); 
-                $consultaPre->execute();
-                $resultado = $consultaPre->get_result();
-                $recursos = $resultado->fetch_all(MYSQLI_ASSOC);
-
-                if(count($recursos) == 0){
-                    echo "<p>No tienes recursos turísticos reservados.</p>";
-                }else{
-                    for($index = 0; $index < count($recursos); $index++){
-                        echo "<section>";
-                        echo "<h3> Detalles del Recurso Turístico</h3>";
-                        echo "<p> Nombre: " . $recursos[$index]["nombre"] . "</p>";
-                        echo "<p> Descripción: " . $recursos[$index]["descripcion"] . "</p>";
-                        echo "<h3> Detalles de la Reserva</h3>";
-                        echo "<p> Fecha de Inicio: " . $recursos[$index]["fecha_inicio"] . "</p>";
-                        echo "<p> Fecha de Fin: " . $recursos[$index]["fecha_fin"] . "</p>";
-                        echo "<p> Presupuesto: " . $recursos[$index]["presupuesto"] . "€</p>";
-                        echo "<form method='post'>";
-                        echo "<input type='hidden' name='anular_recurso' value='" . $recursos[$index]["id"] . "'>";
-                        echo "<button type='submit'>Anular</button>";
-                        echo "</form>";
-                        echo "</section>";
-                    }
-                }
-
-                $consultaPre->close();
-                $db->close();
-
             }
 
-            function paintOptions() {
-                $html = '<ul>';
+            echo $reservas->paintOptions();
 
-                $html .= '<li><a href="recursos.php">Recursos Turísticos</a></li>';
-                $html .= '<li><a href="reservas_usuario.php">Reservas</a></li>';
-                $html .= '<li><a href="anulaciones.php">Anulaciones</a></li>';
+            echo $reservas->mostrarPlanificacion();
 
-                $html .= '</ul>';
-
-                return $html;
-            }
 
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 // Detecta cuál botón fue pulsado
                 if( isset($_POST['anular_recurso'])) {
                     $reserva_id = $_POST['anular_recurso'];
-                    
-                    $db = new mysqli("localhost", "DBUSER2025", "DBPWD2025",
-                "reservas");
-                if ($db->connect_errno) 
-                    echo "Error de conexión: " . $db->connect_error;
 
-                    $consultaPre = $db->prepare("UPDATE reserva SET estado = 'anulada' WHERE id = ?");
-                    $consultaPre->bind_param("i", $reserva_id);
-
-                    if($consultaPre->execute() === TRUE){
-                        echo "<p>Reserva anulada con éxito.</p>";
-                        header("Location: " . $_SERVER['PHP_SELF']);
-                    } else {
-                        echo "<p>Error al anular la reserva: " . $consultaPre->error . "</p>";
-                    }
-
-                    $consultaPre->close();
-                    $db->close();
+                    $reservas->anularRecurso($reserva_id);
                 } else {
                     echo "<p>No se ha seleccionado ningún recurso para anular.</p>";
                 }
             }
 
         ?>
-       
-    </main>
 
+
+    </main>
 </body>
 </html>

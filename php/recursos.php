@@ -35,77 +35,27 @@
        
         
     <?php
-            session_start();
-        
-            // comprobar que el usuario está logueado
-            if(!isset($_SESSION["usuario"])){
-                echo "<p>Por favor, inicia sesión para ver los recursos turísticos.</p>";
-                echo '<p><a href="../reservas.php">Iniciar sesión</a></p>';
+        session_start();
+        require_once 'reservas.php';
+        $reservas = new Reserva();
+    
+        if (!isset($_SESSION["usuario"])) {
+            echo "<p>Por favor, inicia sesión para ver los recursos turísticos.</p>";
+            echo '<p><a href="../reservas.php">Iniciar sesión</a></p>';
+            exit;
+        }
+        echo $reservas->paintOptions();
 
+        echo $reservas->mostrarRecursos();
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            echo "<p>Has pulsado un botón de reserva.</p>";
+            if (isset($_POST['reservar_recurso'])) {
+                $_SESSION['reserva_recurso'] = $_POST['reservar_recurso'];
+                header("Location: reserva_recurso.php");
                 exit;
-            }else{
-
-                echo paintOptions();
-
-                echo "<h2>Recursos Turísticos</h2>";
-
-                $db = new mysqli("localhost", "DBUSER2025", "DBPWD2025",
-                "reservas");
-                if ($db->connect_errno) 
-                    echo "Error de conexión: " . $db->connect_error;
-
-                // Consultar si existe ese usuario
-                $consultaPre = $db->prepare("SELECT * FROM recurso_turistico"); 
-                $consultaPre->execute();
-                $resultado = $consultaPre->get_result();
-                $recursos = $resultado->fetch_all(MYSQLI_ASSOC);
-
-                for($index = 0; $index < count($recursos); $index++){
-                    echo "<section>";
-                    echo "<h3>" . $recursos[$index]["nombre"] . "</h3>";
-                    echo "<p> Descripción:" . $recursos[$index]["descripcion"] . "</p>";
-                    echo "<p> Número de plazas:" . $recursos[$index]["n_plazas"] . "</p>";
-                    echo "<p>Precio: " . $recursos[$index]["precio"] . "€</p>";
-                    echo "<p> Inicio: " . $recursos[$index]["d_inicio"] . "</p>";
-                    echo "<p> Final: " . $recursos[$index]["d_final"] . "</p>";
-                    echo "<form method='post'>";
-                    echo "<input type='hidden' name='reservar_recurso' value='" . $recursos[$index]["id"] . "'>";
-                    echo "<button type='submit'>Reservar</button>"; //onclick='reservas.reservarRecurso( " . $recursos[$index]["id"] . ")'
-                    echo "</form>";
-                    echo "</section>";
-                }
-
-                $consultaPre->close();
-                $db->close();
-
+            } else {
+                echo "<p>No se ha seleccionado ningún recurso para reservar.</p>";
             }
-
-            function paintOptions() {
-                $html = '<ul>';
-
-                $html .= '<li><a href="recursos.php">Recursos Turísticos</a></li>';
-                $html .= '<li><a href="reservas_usuario.php">Reservas</a></li>';
-                $html .= '<li><a href="anulaciones.php">Anulaciones</a></li>';
-
-                $html .= '</ul>';
-
-                return $html;
-            }
-
-            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                echo "<p>Has pulsado un botón de reserva.</p>";
-                // Detecta cuál botón fue pulsado
-                if( isset($_POST['reservar_recurso'])) {
-                    $_SESSION['reserva_recurso'] = $_POST['reservar_recurso'];
-                    header("Location: reserva_recurso.php");
-                } else {
-                    echo "<p>No se ha seleccionado ningún recurso para reservar.</p>";
-                }
-            }
-
-        ?>
-
-    </main>
-
-</body>
-</html>
+        }
+    ?>
